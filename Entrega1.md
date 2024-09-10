@@ -1,2 +1,1 @@
--[TRIBU]
-
+TRIBU
