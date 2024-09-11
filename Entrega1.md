@@ -1,28 +1,39 @@
 # TRIBU
 Breve descripción o introducción de lo que hace el proyecto.
 
-## Índice
+# Índice
 
-- [Entorno de Desarrollo](##instalacion)
-- [Diagrama de Despliegue](###diagrama)
-- [Requerimientos Funcionales](###funcionales)
-- [Requerimientos No Funcionales](####nofuncionales)
-- [Diagrama Casos de Uso](#####diagramaCasosUso)
-- [Descripción de Casos de Uso](######casosUsoDescripcion)
-  
+- [Entorno de Desarrollo](#entorno-de-desarrollo)
+- [Diagrama de Despliegue](#diagrama-de-despliegue)
+- [Requerimientos Funcionales](#requerimientos-funcionales)
+- [Requerimientos No Funcionales](#requerimientos-no-funcionales)
+- [Diagrama Casos de Uso](#diagrama-casos-de-uso)
+- [Descripción de Casos de Uso](#descripcion-de-casos-de-uso)
 
-##Entorno de Desarrollo
+# Entorno de Desarrollo
 
 Aquí puedes incluir una descripción más detallada del proyecto, las tecnologías utilizadas y los problemas que resuelve. También puedes incluir capturas de pantalla o GIFs si es necesario.
 
-###Diagrmma de despliegue
+# Diagrama de Despliegue
 
+Aquí va la información sobre el diagrama de despliegue.
 
-####Requerimientos No Funcionales
+# Requerimientos Funcionales
 
-## Instalación
+Aquí va la información sobre los requerimientos funcionales.
 
-Instrucciones para clonar el repositorio y los pasos para configurar el entorno de desarrollo.
+# Requerimientos No Funcionales
+
+Aquí va la información sobre los requerimientos no funcionales.
+
+# Diagrama Casos de Uso
+
+Aquí va la información sobre el diagrama de casos de uso.
+
+# Descripción de Casos de Uso
+
+Aquí va la descripción detallada de los casos de uso.
+
 
 ```bash
 # Clona el repositorio
