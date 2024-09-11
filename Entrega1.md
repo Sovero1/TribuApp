@@ -3,18 +3,19 @@ Breve descripción o introducción de lo que hace el proyecto.
 
 ## Índice
 
-- [Descripción](#descripción)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Créditos](#créditos)
+- [Entorno de Desarrollo](##instalacion)
+- [Diagrama de Despliegue](###diagrama)
+- [Requerimientos Funcionales](###funcionales)
+- [Requerimientos No Funcionales](####nofuncionales)
+- [Diagrama Casos de Uso](#####diagramaCasosUso)
+- [Descripción de Casos de Uso](######casosUsoDescripcion)
+  
 
-## Descripción
+## Entorno de Desarrollo
 
 Aquí puedes incluir una descripción más detallada del proyecto, las tecnologías utilizadas y los problemas que resuelve. También puedes incluir capturas de pantalla o GIFs si es necesario.
 
-### Características
+### Diagrmma de despliegue
 
 - Característica 1
 - Característica 2
