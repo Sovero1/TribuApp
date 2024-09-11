@@ -11,15 +11,14 @@ Breve descripción o introducción de lo que hace el proyecto.
 - [Descripción de Casos de Uso](######casosUsoDescripcion)
   
 
-## Entorno de Desarrollo
+##Entorno de Desarrollo
 
 Aquí puedes incluir una descripción más detallada del proyecto, las tecnologías utilizadas y los problemas que resuelve. También puedes incluir capturas de pantalla o GIFs si es necesario.
 
-### Diagrmma de despliegue
+###Diagrmma de despliegue
 
-- Característica 1
-- Característica 2
-- Característica 3
+
+####Requerimientos No Funcionales
 
 ## Instalación
 
