@@ -82,7 +82,7 @@ Aquí va la información sobre el diagrama de despliegue.
 
 # Diagrama Casos de Uso
 
-Aquí va la información sobre el diagrama de casos de uso.
+<img src="resources/Diagrama casos deuso.png">
 
 # Descripción de Casos de Uso
 
