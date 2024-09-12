@@ -1,5 +1,6 @@
-# TRIBU
-Breve descripción o introducción de lo que hace el proyecto.
+<h1 style="text-align: center; font-size: 48px;">TRIBU</h1>
+
+Tribu es un aplicativo movil pensado en ser una herramienta de gran utilidad para la comunidad de la universidad de Lima.Los usuarios podrán tener acceso a basta información de profesores por reseñas hechas por otros estudiantes, buscar materiales de estudio de acuerdo a los cursos que desee, compartir ideas y sus aportes en archivos a traves de publicaciones, fomentar el dialogo abierto en los comentarios de los posts, entre otras actividades.
 
 # Índice
 
@@ -12,7 +13,23 @@ Breve descripción o introducción de lo que hace el proyecto.
 
 # Entorno de Desarrollo
 
-Aquí puedes incluir una descripción más detallada del proyecto, las tecnologías utilizadas y los problemas que resuelve. También puedes incluir capturas de pantalla o GIFs si es necesario.
+Para el desarrollo de nuestro aplicativo Android se trabaja con el framework multiplataforma Flutter SDK 24.0, el cual se descargó el archivo zip desde su sitio oficial .https://docs.flutter.dev/get-started/install/windows. 
+![flutter instalación](resources\flutter_instalar.png)
+
+Luego de descomprimir el archivo ubicamos la carpeta bin y añadimos esta ruta a las variables de entorno del sistema. Esto nos permitirá ejecutar los comandos de Flutter en nuestra terminal.
+![bin carpeta](resources\bin_carpeta.png)
+
+![flutter en terminal](resources\flutter_comandos.png)
+
+Para compilar la aplicación se utiliza el entorno de Android Studio, aquí creamos un emulador de dispositivo móvil para visualizar lo que se esté desarrollando. https://developer.android.com/studio/install?hl=es-419
+
+![descargar de android studio](resources\android_studio_instalar.png)
+
+![emulador android studio](resources\emulador_android.png)
+
+Como preferencia del equipo, utilizamos Visual Studio Code como editor de código fuente. https://code.visualstudio.com/download. Descargamos la extensión de Flutter 
+
+![](resources\emulador_android.png)
 
 # Diagrama de Despliegue
 
