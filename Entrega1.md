@@ -9,7 +9,8 @@ Tribu es un aplicativo movil pensado en ser una herramienta de gran utilidad par
 - [Requerimientos Funcionales](#requerimientos-funcionales)
 - [Requerimientos No Funcionales](#requerimientos-no-funcionales)
 - [Diagrama Casos de Uso](#diagrama-casos-de-uso)
-- [Descripción de Casos de Uso](#descripcion-de-casos-de-uso)
+- [Descripción de Casos de Uso](#descripción-de-casos-de-uso)
+
 
 # Entorno de Desarrollo
 
