@@ -98,6 +98,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 ### Mockups:
 #### 1. Página de inicio:
 Esta pantalla sirve como la interfaz inicial para los usuarios, mostrando dos opciones: 'Crear una cuenta' e 'Iniciar sesión'.
+
 <img src="resources/1.jpg" height="350" width="190">
 
 #### 2. Inicio de sesión: 
