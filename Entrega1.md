@@ -96,46 +96,57 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 # Descripción de Casos de Uso
 
 ### Mockups:
-1. Página de inicio: Esta pantalla sirve como la interfaz inicial para los usuarios, mostrando dos opciones: 'Crear una cuenta' e 'Iniciar sesión'.
+#### 1. Página de inicio:
+Esta pantalla sirve como la interfaz inicial para los usuarios, mostrando dos opciones: 'Crear una cuenta' e 'Iniciar sesión'.
 <img src="resources/1.jpg" height="350" width="190">
 
-2. Inicio de sesión: Esta pantalla permite a los usuarios iniciar sesión en su cuenta ingresando su 'Código' (identificador único) y 'Contraseña.' Incluye enlaces para recuperar la contraseña y para registrarse si aún no tienen una cuenta.
+#### 2. Inicio de sesión: 
+Esta pantalla permite a los usuarios iniciar sesión en su cuenta ingresando su 'Código' (identificador único) y 'Contraseña.' Incluye enlaces para recuperar la contraseña y para registrarse si aún no tienen una cuenta.
 
 <img src="resources/2.jpg" height="350" width="190">
 
-3. Crear cuenta: Esta pantalla permite a los usuarios crear una nueva cuenta ingresando su 'Código,' 'Nombre,' 'Correo,' y 'Nueva contraseña.' Hay una opción para regresar a la pantalla de inicio de sesión para los usuarios que ya tienen una cuenta.
+#### 3. Crear cuenta: 
+Esta pantalla permite a los usuarios crear una nueva cuenta ingresando su 'Código,' 'Nombre,' 'Correo,' y 'Nueva contraseña.' Hay una opción para regresar a la pantalla de inicio de sesión para los usuarios que ya tienen una cuenta.
 
 <img src="resources/3.jpg" height="350" width="190">
 
-4. Recuperar cuenta: Esta página permite a los usuarios recuperar su cuenta ingresando su correo electrónico registrado. También incluye una opción para que los usuarios que ya tienen cuenta puedan iniciar sesión.
+#### 4. Recuperar cuenta:
+Esta página permite a los usuarios recuperar su cuenta ingresando su correo electrónico registrado. También incluye una opción para que los usuarios que ya tienen cuenta puedan iniciar sesión.
 
 <img src="resources/4.jpg" height="350" width="190">
 
-5. Muro de publicaciones: El feed o 'Muro' donde los estudiantes pueden publicar actualizaciones, incluyendo archivos. Las publicaciones de diferentes usuarios muestran experiencias de clases, recursos compartidos y material de estudio.
+#### 5. Muro de publicaciones:
+El feed o 'Muro' donde los estudiantes pueden publicar actualizaciones, incluyendo archivos. Las publicaciones de diferentes usuarios muestran experiencias de clases, recursos compartidos y material de estudio.
 
 <img src="resources/5.jpg" height="350" width="190">
 
-6. Filtrado: Esta pantalla de búsqueda permite a los usuarios filtrar por carreras, profesores o materiales de estudio, ofreciendo botones separados para buscar por 'Profesor' o 'Materiales.'
+#### 6. Filtrado:
+Esta pantalla de búsqueda permite a los usuarios filtrar por carreras, profesores o materiales de estudio, ofreciendo botones separados para buscar por 'Profesor' o 'Materiales.'
 
 <img src="resources/6.jpg" height="350" width="190">
 
-7. Post: Esta pantalla permite a los usuarios publicar contenido como archivos (PPT, PDF, Excel) o imágenes, relacionados con cursos o tareas. Se puede ver las publicaciones anteriores del usuario.
+#### 7. Post: 
+Esta pantalla permite a los usuarios publicar contenido como archivos (PPT, PDF, Excel) o imágenes, relacionados con cursos o tareas. Se puede ver las publicaciones anteriores del usuario.
 
 <img src="resources/7.jpg" height="350" width="190">
 
-8. Opciones: La pantalla de opciones ofrece acceso a la configuración del perfil del usuario, sus cursos y la configuración general de la aplicación, ofreciendo funciones para la gestión personalizada.
+#### 8. Opciones:
+La pantalla de opciones ofrece acceso a la configuración del perfil del usuario, sus cursos y la configuración general de la aplicación, ofreciendo funciones para la gestión personalizada.
 
 <img src="resources/8.jpg" height="350" width="190">
 
-9. Mi perfil: Muestra la información del perfil del usuario como 'Nombre,' 'Carrera,' 'Código,' 'Universidad' e información de contacto. El usuario puede editar los detalles de su perfil desde esta pantalla.
+#### 9. Mi perfil:
+Muestra la información del perfil del usuario como 'Nombre,' 'Carrera,' 'Código,' 'Universidad' e información de contacto. El usuario puede editar los detalles de su perfil desde esta pantalla.
 
 <img src="resources/9.jpg" height="350" width="190">
 
-10. Mis cursos: Esta pantalla lista los cursos del usuario, incluyendo los horarios de clases, los detalles del profesor y los materiales de estudio. Proporciona una vista integral de los recursos relacionados con los cursos y los horarios de atención del profesor.
+#### 10. Mis cursos: 
+Esta pantalla lista los cursos del usuario, incluyendo los horarios de clases, los detalles del profesor y los materiales de estudio. Proporciona una vista integral de los recursos relacionados con los cursos y los horarios de atención del profesor.
 
 <img src="resources/10.jpg" height="350" width="190">
 
-11. Configuración: Esta pantalla es donde el usuario puede ajustar diversas opciones relacionadas con la experiencia de uso.
+#### 11. Configuración: 
+Esta pantalla es donde el usuario puede ajustar diversas opciones relacionadas con la experiencia de uso.
 
 - Notificaciones: Permite al usuario gestionar las preferencias de notificaciones que recibe dentro de la aplicación.
 - Visualización: Permite ajustar temas visuales como el modo oscuro.
