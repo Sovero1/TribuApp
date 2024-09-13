@@ -1,6 +1,15 @@
 <h1 style="text-align: center; font-size: 48px;">TRIBU</h1>
 
-Tribu es un aplicativo movil pensado en ser una herramienta de gran utilidad para la comunidad de la universidad de Lima.Los usuarios podrán tener acceso a basta información de profesores por reseñas hechas por otros estudiantes, buscar materiales de estudio de acuerdo a los cursos que desee, compartir ideas y sus aportes en archivos a traves de publicaciones, fomentar el dialogo abierto en los comentarios de los posts, entre otras actividades.
+Tribu es una innovadora aplicación móvil diseñada para transformar tu experiencia universitaria en la Universidad de Lima. Con Tribu, tendrás acceso a una plataforma integral que conecta a estudiantes, facilita el intercambio de conocimientos y fomenta el diálogo constructivo.
+
+Características Destacadas:
+
+### Reseñas de Profesores:
+Consulta opiniones y calificaciones de profesores realizadas por tus compañeros para tomar decisiones informadas sobre tus cursos.
+### Materiales de Estudio: 
+Encuentra y comparte materiales relevantes y recursos de estudio adaptados a los cursos que estás tomando.
+### Publicaciones y Compartición de Ideas: 
+Comparte tus aportes y archivos con la comunidad universitaria a través de publicaciones, y recibe retroalimentación de tus colegas.
 
 # Índice
 
