@@ -79,7 +79,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 # Requerimientos No Funcionales
 
 ### 1. Almacenamiento en una base de datos
-- RNF 1.1: Se integra a una base de datos para almacenar materiales, perfiles y reseñas.
+- RNF 1.1: Se integra a una base de datos SQlite3 para almacenar materiales, perfiles y reseñas.
 - RNF 1.2: Permite al usuario Administrador gestionar la base de datos 
 ### 2. Gestión de datos sensibles
 - RNF 2.1: Garantizar la privacidad de los datos e información brindados por el usuario.
