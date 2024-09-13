@@ -99,7 +99,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 1. Página de inicio: Esta pantalla sirve como la interfaz inicial para los usuarios, mostrando dos opciones: 'Crear una cuenta' e 'Iniciar sesión'.
 <img src="resources/1.jpg" height="350" width="190">
 
-2. Inicio de sesión: sta pantalla permite a los usuarios iniciar sesión en su cuenta ingresando su 'Código' (identificador único) y 'Contraseña.' Incluye enlaces para recuperar la contraseña y para registrarse si aún no tienen una cuenta.
+2. Inicio de sesión: Esta pantalla permite a los usuarios iniciar sesión en su cuenta ingresando su 'Código' (identificador único) y 'Contraseña.' Incluye enlaces para recuperar la contraseña y para registrarse si aún no tienen una cuenta.
 
 <img src="resources/2.jpg" height="350" width="190">
 
