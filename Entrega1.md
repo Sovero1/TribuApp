@@ -73,7 +73,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 ### 8 Publicaciones de los usuarios
 - RF 8.1: Permitir a los usuarios hacer publicaciones en el Muro, subir una imagen, archivos. 
 
-
+<img src="resources/Diagrama_Entidad_relacion_funcional.png">
 
 
 # Requerimientos No Funcionales
@@ -87,7 +87,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 - RNF 3.1: La aplicación será responsive, adaptándose a diferentes tamaños de pantalla, cumpliendo con el estándar de Android 10+.
 - RNF 3.2: La aplicación incluirá temas de colores predefinidos para mejorar la usabilidad y estética.
 
-
+<img src="resources/Diagrama_Entidad_relacion_no_funcional.png">
 
 # Diagrama Casos de Uso
 
