@@ -43,7 +43,7 @@ Como preferencia del equipo, utilizamos Visual Studio Code como editor de códig
 
 # Diagrama de Despliegue
 
-<img src="resources/Diagrama_despliegue_tribu.png">
+<img src="resources/Diagrama.despliegue.tribu.png">
 
 # Requerimientos Funcionales
 
