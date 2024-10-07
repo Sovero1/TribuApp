@@ -5,61 +5,80 @@ import '../../models/seccion_docente_curso.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
 
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   @override
-  // TODO: implement key
   _HomePageState createState() => _HomePageState();
-
 }
 
 class _HomePageState extends State<HomePage> {
   HomeController control = Get.put(HomeController());
-  int _selectedIndex =0;
+  int _selectedIndex = 0;
+  late Widget _body;
+  Usuario? usuario;
 
-  final List<Widget> _pages = [
-    Center(child: Text('Pagina 1'),),
-     Center(child: Text('Pagina 2'),),
-      Center(child: Text('Pagina 3'),),
-        Center(child: Text('Pagina 4'),),
+  @override
+  void initState() {
+    super.initState();
+    _body = _getBody(_selectedIndex);
+  }
 
-  ];
+  Widget _getBody(int index) {
+    switch (index) {
+      case 0:
+        return _bodyPestana1();
+      case 1:
+        return Center(child: Text('Página 2'));
+      case 2:
+        return Center(child: Text('Página 3'));
+      case 3 :
+        return Center(child : Text('Pagina 4'));
+      default:
+        return Center(child: Text('Página 1'));
+    }
+  }
 
-  void _onItemTapped(int index){
-
-    setState((){
+  void _onItemTapped(int index) {
+    setState(() {
       _selectedIndex = index;
+      _body = _getBody(index);
     });
   }
 
-  Widget _buildBody(BuildContext context,Usuario usuario){
-    return SafeArea(child: Scaffold(
-      body: _pages[_selectedIndex],
-      bottomNavigationBar: 
-        BottomNavigationBar(items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Buscar'),
-          BottomNavigationBarItem(icon: Icon( Icons.add),label: 'Publicar'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu),label: 'Menu'),
-      
+  Widget _buildBody(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+      body: _body, //_body(context, usuario),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search), label: 'Buscar'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add), label: 'Post'),
+          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
         ],
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped, 
-        
-        ),
+        onTap: _onItemTapped,
+      ),
     ));
   }
 
-  Widget _body(BuildContext context, Usuario usuario) {
+  Widget _bodyPestana1() {
     return SingleChildScrollView(
         child: Padding(
       padding: EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Mis Cursos ${usuario.correo} - ${usuario.idUsuario}',
-              style: TextStyle(
-                fontSize: 22,
-              )),
+          Obx(() {
+            return control.usuario.value.idUsuario != 0
+                ? Text(
+                    'Mis Cursos ${control.usuario.value.correo} - ${control.usuario.value.idUsuario}',
+                    style: TextStyle(
+                      fontSize: 22,
+                    ))
+                : SizedBox.shrink();
+          }),
           Obx(() {
             return ListView.builder(
                 shrinkWrap: true,
@@ -88,9 +107,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final Map<String, dynamic> args =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    Usuario usuario = Usuario.fromMap(args);
+    this.usuario = Usuario.fromMap(args);
+    if (this.usuario != null) {
+      control.updateUsuario(this.usuario!);
+    }
     control.listarSecciones();
-    return _buildBody(context, usuario);
+    return _buildBody(context);
   }
 }
-
