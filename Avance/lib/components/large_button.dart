@@ -1,5 +1,6 @@
 import 'package:tribu_app/configs/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:tribu_app/configs/colors.dart';
 
 class LargeButton extends StatelessWidget {
   final String title;
@@ -25,7 +26,7 @@ class LargeButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-              backgroundColor ?? const Color.fromARGB(255, 255, 255, 255)),
+              backgroundColor ?? AppColors.primaryColor),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
             borderRadius: borderRadius ?? BorderRadius.circular(5),
           )),

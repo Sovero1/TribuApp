@@ -9,34 +9,29 @@ class Tag extends StatelessWidget {
   const Tag({
     Key? key,
     required this.text,
-    this.color = Colors.black,
+    this.color = Colors.white,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(30), // Bordes redondeados
-        border: Border.all(
-          color: AppColors.primaryColor, // Color del borde
-          width: 2, // Grosor del borde
-        ),
+      padding: EdgeInsets.only(
+        left: 9,
+        right: 9,
+        top: 4,
+        bottom: 4,
       ),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: text,
-          hintStyle: const TextStyle(
-            color: Colors.grey,
-            fontWeight: FontWeight.bold,
-          ),
-          border: InputBorder.none, // Sin borde adicional
-        ),
+      decoration: BoxDecoration(
+        color: AppColors
+            .primaryColor, // Asegúrate de definir AppColors.primaryColor
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: Text(
+        text,
         style: TextStyle(
-          color: color,
-          fontWeight: FontWeight.bold,
-        ),
+            fontWeight: FontWeight.bold,
+            color: color // Puedes ajustar el color del texto si es necesario
+            ),
       ),
     );
   }

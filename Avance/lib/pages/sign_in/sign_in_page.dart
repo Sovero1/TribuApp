@@ -52,7 +52,7 @@ class SignInPage extends StatelessWidget {
                         );
                 }),
                 LargeButton(
-                  title: 'Ingresar',
+                  title: 'Entra',
                   onPressed: () {
                     print('Ingresar presionado');
                     control.goHome(context);
@@ -66,7 +66,7 @@ class SignInPage extends StatelessWidget {
                       print('Ingresar Crear Cuenta');
                     }),
                 LargeButton(
-                    title: 'Recuperar Contraseña',
+                    title: '¿Olvidaste tu contraseña?',
                     backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(25),
                     onPressed: () {

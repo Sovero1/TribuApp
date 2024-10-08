@@ -30,8 +30,8 @@ class _HomePageState extends State<HomePage> {
         return Center(child: Text('Página 2'));
       case 2:
         return Center(child: Text('Página 3'));
-      case 3 :
-        return Center(child : Text('Pagina 4'));
+      case 3:
+        return Center(child: Text('Pagina 4'));
       default:
         return Center(child: Text('Página 1'));
     }
@@ -51,10 +51,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search), label: 'Buscar'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.add), label: 'Post'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Buscar'),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Post'),
           BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
         ],
         currentIndex: _selectedIndex,

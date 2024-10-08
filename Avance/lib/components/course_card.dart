@@ -28,8 +28,10 @@ class CourseCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 7),
       child: Card(
-        color: AppColors.backgroundColor,
-        shadowColor: AppColors.sombreadoColor,
+        //color: AppColors.getBackgroundColor(context),
+        shadowColor: Theme.of(context).brightness == Brightness.dark
+            ? Colors.white
+            : AppColors.secondaryColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -48,7 +50,7 @@ class CourseCard extends StatelessWidget {
                     code,
                     style: TextStyle(
                       fontSize: 12,
-                      color: AppColors.textColor,
+                      color: AppColors.getSecondaryColor(context),
                     ),
                   ),
                   Text(
@@ -62,7 +64,9 @@ class CourseCard extends StatelessWidget {
                     children: [
                       Text(status),
                       SizedBox(width: 15),
-                      Tag(text: this.diploma, color: tagColor),
+                      Tag(
+                          text: this.diploma,
+                          color: AppColors.getButtonText(context)),
                     ],
                   ),
                   Container(
