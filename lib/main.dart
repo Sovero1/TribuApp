@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tribu_app/pages/inicio/inicio_page.dart';
-import 'components/course_card.dart';
-import 'components/tag.dart';
-import 'configs/colors.dart';
 import 'pages/home/home_page.dart';
 import 'pages/sign_in/sign_in_page.dart';
 import 'pages/sign_up/sign_up_page.dart';

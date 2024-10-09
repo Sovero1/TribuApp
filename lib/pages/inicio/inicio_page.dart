@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tribu_app/configs/colors.dart';
 import 'inicio_controller.dart';
 import '../../components/custom_button.dart'; // Importa el componente de botón
 
@@ -55,7 +56,8 @@ class InicioPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: null,
       body: _buildBody(context),
-      backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige (#f7e2c9)
+      backgroundColor:
+          AppColors.secondaryColor, // Color de fondo beige (#f7e2c9)
     );
   }
 }

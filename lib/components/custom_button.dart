@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
+import '../configs/colors.dart'; // Ruta correcta al archivo colors.dart
 
 class CustomButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
-  final Color backgroundColor;
-  final Color textColor;
   final bool isOutlined;
 
   const CustomButton({
     Key? key,
     required this.title,
     required this.onPressed,
-    this.backgroundColor = const Color(0xFF645749), // Color por defecto
-    this.textColor = Colors.white,
     this.isOutlined = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = AppColors.getButtonColor(context);
+    // Ahora el color del texto será beige (secondaryColor)
+    final textColor = AppColors.getSecondaryColor(context);
+
     return SizedBox(
       width: double.infinity,
       child: isOutlined
           ? OutlinedButton(
               onPressed: onPressed,
               style: OutlinedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 15),
+                padding: const EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -35,7 +36,7 @@ class CustomButton extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Titulo',
                   fontSize: 18,
-                  color: backgroundColor,
+                  color: backgroundColor, // Color del borde y texto en outlined
                 ),
               ),
             )
@@ -43,7 +44,7 @@ class CustomButton extends StatelessWidget {
               onPressed: onPressed,
               style: ElevatedButton.styleFrom(
                 backgroundColor: backgroundColor,
-                padding: EdgeInsets.symmetric(vertical: 15),
+                padding: const EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -53,7 +54,8 @@ class CustomButton extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Titulo',
                   fontSize: 18,
-                  color: textColor,
+                  color:
+                      textColor, // Aquí cambiamos el color del texto al beige
                 ),
               ),
             ),
