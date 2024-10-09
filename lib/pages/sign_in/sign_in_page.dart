@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'sign_in_controller.dart';
-import '../../components/large_button.dart';
+import '../../components/Custom_Button.dart';
 
 class SignInPage extends StatelessWidget {
   SignInController control = Get.put(SignInController());
@@ -9,79 +9,118 @@ class SignInPage extends StatelessWidget {
   Widget _buildBody(BuildContext context) {
     return SafeArea(
         child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Text(
-                  'Iniciar sesion',
-                  style: TextStyle(fontFamily: 'Titulo', fontSize: 22),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextField(
-                  controller: control.txtUsuario,
-                  decoration: InputDecoration(
-                      labelText: 'Codigo',
-                      border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 16.0)),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextField(
-                  controller: control.txtContrasenia,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      labelText: 'Contraseña',
-                      border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 16.0)),
-                ),
-                Obx(() {
-                  return (control.mensaje.value == '')
-                      ? SizedBox(
-                          height: 10,
-                        )
-                      : Column(
-                          children: [
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(control.mensaje.value)
-                          ],
-                        );
-                }),
-                LargeButton(
-                  title: 'Entra',
-                  onPressed: () {
-                    print('Ingresar presionado');
-                    control.goHome(context);
-                  },
-                  textColor: const Color.fromARGB(255, 2, 2, 2),
-                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                ),
-                LargeButton(
-                    title: 'Crear Cuenta',
-                    onPressed: () {
-                      print('Ingresar Crear Cuenta');
-                    }),
-                LargeButton(
-                    title: '¿Olvidaste tu contraseña?',
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(25),
-                    onPressed: () {
-                      print('Ingresar Reset');
-                    })
-              ],
-            )));
+      padding: EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Logo y título
+          Image.asset(
+            'assets/img/adaptive_icon_foreground.png',
+            height: 120.0,
+          ),
+          SizedBox(height: 15),
+          Text(
+            'Iniciar sesion',
+            style: TextStyle(
+              fontFamily: 'Titulo',
+              fontSize: 22,
+              color: Color(0xFF393333),
+            ),
+          ),
+          SizedBox(height: 15),
+          // Campo de Código
+          TextField(
+            controller: control.txtUsuario,
+            decoration: InputDecoration(
+              labelText: 'CÓDIGO',
+              labelStyle:
+                  TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
+          ),
+          SizedBox(height: 15),
+          // Campo de Contraseña
+          TextField(
+            controller: control.txtContrasenia,
+            obscureText: true,
+            decoration: InputDecoration(
+              labelText: 'CONTRASEÑA',
+              labelStyle:
+                  TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
+          ),
+          Obx(() {
+            return (control.mensaje.value == '')
+                ? SizedBox(height: 10)
+                : Column(
+                    children: [
+                      SizedBox(height: 5),
+                      Text(
+                        control.mensaje.value,
+                        style: TextStyle(
+                          color: control.mensaje.value.startsWith('Success')
+                              ? Colors.green
+                              : Colors.red,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  );
+          }),
+          SizedBox(height: 15),
+
+          CustomButton(
+            title: 'Ingresa',
+            onPressed: () {
+              control.goHome(context);
+            },
+          ),
+          SizedBox(height: 15),
+
+          CustomButton(
+            title: 'Crear cuenta',
+            onPressed: () {
+              Navigator.of(context).pushNamed('/sign-up');
+            },
+            isOutlined: true,
+          ),
+          SizedBox(height: 10),
+
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/reset');
+            },
+            child: Text(
+              '¿Olvidaste tu contraseña?',
+              style: TextStyle(
+                fontFamily: 'Texto',
+                color: Color(0xFF393333),
+                decoration: TextDecoration.underline,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ));
+
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            resizeToAvoidBottomInset: false,
-            appBar: null,
-            body: _buildBody(context)));
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: null,
+        body: _buildBody(context),
+        backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+      ),
+    );
   }
 }
