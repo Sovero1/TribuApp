@@ -88,6 +88,7 @@ flutter:
     - assets/json/secciones.json
     - assets/img/splash/splash_icon.png
     - assets/img/splash/splash_icon_dark.png
+    - assets/img/adaptive_icon_foreground.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

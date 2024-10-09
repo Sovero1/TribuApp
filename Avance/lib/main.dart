@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tribu_app/pages/inicio/inicio_page.dart';
 import 'components/course_card.dart';
 import 'components/tag.dart';
 import 'configs/colors.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // Inicia la app con el SplashScreen
-      initialRoute: '/sign-in',
+      initialRoute: '/inicio',
       routes: {
         '/home': (context) => (Scaffold(
               appBar: AppBar(title: Text('Tribu - PM 2024-2')),
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/sign-in': (context) => SignInPage(),
         '/sign-up': (context) => SignUpPage(),
         '/reset': (context) => ResetPage(),
+        '/inicio': (context) => InicioPage(),
       },
     );
   }
