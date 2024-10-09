@@ -1,0 +1,29 @@
+[
+    {
+      "id_Post": 1,
+      "titulo": "Primer día de clases",
+      "foto_post": "url_de_la_foto",
+      "descripcion": "Descripción del post",
+      "reacciones": 10,
+      "comentarios": 5,
+      "material": "Material relacionado",
+      "id_estudiante": 123,
+      "foto_estudiante": "url_foto_estudiante",
+      "nombre_estudiante": "Vanesa Torres",
+      "carrera_estudiante": "Psicología"
+    },
+    {
+      "id_Post": 2,
+      "titulo": "Otro post",
+      "foto_post": "url_de_otra_foto",
+      "descripcion": "Otra descripción",
+      "reacciones": 3,
+      "comentarios": 1,
+      "material": "Otro material",
+      "id_estudiante": 456,
+      "foto_estudiante": "url_foto_otro_estudiante",
+      "nombre_estudiante": "Juan Pérez",
+      "carrera_estudiante": "Ingeniería"
+    }
+  ]
+  
