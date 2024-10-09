@@ -6,7 +6,7 @@ import '../../components/course_card.dart';
 import '../../models/seccion_docente_curso.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
-import 'package:tribu_app/configs/colors.dart'; // Asegúrate de que la ruta a tu archivo de colores sea correcta
+import 'package:tribu_app/configs/colors.dart';
 
 class HomePage extends StatefulWidget {
   @override
