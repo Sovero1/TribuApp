@@ -5,6 +5,8 @@ import 'pages/sign_in/sign_in_page.dart';
 import 'pages/sign_up/sign_up_page.dart';
 import 'pages/reset/reset_page.dart';
 import 'pages/perfil/perfil_page.dart';
+import 'pages/cursos/cursos_page.dart';
+import 'pages/config/config_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +34,8 @@ class MyApp extends StatelessWidget {
         '/reset': (context) => ResetPage(),
         '/inicio': (context) => InicioPage(),
         '/perfil': (context) => PerfilPage(),
+       // '/cursos': (context) => CursosPage(),
+      // '/config': (context) => ConfigPage(),
       },
     );
   }
