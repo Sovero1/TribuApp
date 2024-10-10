@@ -4,7 +4,6 @@ import 'pages/home/home_page.dart';
 import 'pages/sign_in/sign_in_page.dart';
 import 'pages/sign_up/sign_up_page.dart';
 import 'pages/reset/reset_page.dart';
-
 // Importa la nueva página de Splash
 
 void main() {

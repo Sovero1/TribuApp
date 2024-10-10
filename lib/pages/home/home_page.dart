@@ -84,7 +84,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            
             Obx(() {
               return ListView.builder(
                 shrinkWrap: true,
