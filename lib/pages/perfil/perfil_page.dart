@@ -17,59 +17,78 @@ class PerfilPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Imagen de perfil
                 CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage('assets/img/profile_placeholder.png'), // Cambia la imagen según sea necesario
+                  radius: 100,
+                  backgroundImage: AssetImage('assets/img/profile_placeholder.png'),
                 ),
-                SizedBox(height: 20.0),
-
-                // Nombre completo
+                SizedBox(height: 20),
                 Text(
-                  'Nombre Completo',
+                  'Javier Diaz Guzmán',
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.primaryColor, // Cambia el color según tu preferencia
+                    fontFamily: 'Titulo',
+                    fontSize: 26,
+                    color: AppColors.primaryColor,
                   ),
                 ),
-                SizedBox(height: 10.0),
-
-                // Carrera
+                SizedBox(height: 30),
+                
+                Divider(color: AppColors.primaryColor, thickness: 2), 
                 Text(
-                  'Carrera: Ingeniería de Sistemas',
-                  style: TextStyle(fontSize: 16),
+                  'Ingeniería Industrial',
+                  style: TextStyle(
+                    fontFamily: 'Texto',
+                    fontSize: 20,
+                    color: AppColors.primaryColor,
+                  ),
                 ),
-                SizedBox(height: 10.0),
+                Divider(color: AppColors.primaryColor, thickness: 2), 
+                SizedBox(height: 10),
 
-                // Código
                 Text(
-                  'Código: 123456',
-                  style: TextStyle(fontSize: 16),
+                  '20224857',
+                  style: TextStyle(
+                    fontFamily: 'Texto',
+                    fontSize: 20,
+                    color: AppColors.primaryColor,
+                  ),
                 ),
-                SizedBox(height: 10.0),
+                Divider(color: AppColors.primaryColor, thickness: 2), 
+                SizedBox(height: 10),
 
-                // Universidad
                 Text(
-                  'Universidad: Universidad Ejemplo',
-                  style: TextStyle(fontSize: 16),
+                  'Universidad de Lima',
+                  style: TextStyle(
+                    fontFamily: 'Texto',
+                    fontSize: 20,
+                    color: AppColors.primaryColor,
+                  ),
+                ),    
+                Divider(color: AppColors.primaryColor, thickness: 2),             
+                SizedBox(height: 10),
+                
+                Row(
+                  children: [
+                    Icon(Icons.phone, color: AppColors.primaryColor),
+                    SizedBox(width: 10),
+                    Text(
+                      '98566394',
+                      style: TextStyle(
+                        fontFamily: 'Texto',
+                        fontSize: 20,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 10.0),
-
-                // Número de teléfono
-                Text(
-                  'Teléfono: (123) 456-7890',
-                  style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(height: 30.0),
-
-                // Botón para editar información
+                Divider(color: AppColors.primaryColor, thickness: 2),
+                SizedBox(height: 50),
+            
                 SizedBox(
                   width: 200,
                   child: CustomButton(
                     title: 'Editar',
                     onPressed: () {
-                      Navigator.pushNamed(context, '/editar-perfil'); // Navega a la página de edición de perfil
+                      Navigator.pushNamed(context, '/editar');
                     },
                   ),
                 ),
@@ -78,7 +97,7 @@ class PerfilPage extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: AppColors.secondaryColor, // Color de fondo
+      backgroundColor: AppColors.secondaryColor,
     );
   }
 }
