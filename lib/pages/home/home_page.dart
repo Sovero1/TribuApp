@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/components/post_card.dart';
 import 'package:tribu_app/models/post.dart';
-import '../../components/course_card.dart';
-import '../../models/seccion_docente_curso.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
 import 'package:tribu_app/configs/colors.dart';
@@ -86,17 +84,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Obx(() {
-              return control.usuario.value.idUsuario != 0
-                  ? Text(
-                      'Mis Cursos ${control.usuario.value.correo} - ${control.usuario.value.idUsuario}',
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: AppColors
-                            .primaryColor, // Ajuste de color para el texto
-                      ))
-                  : SizedBox.shrink();
-            }),
+            
             Obx(() {
               return ListView.builder(
                 shrinkWrap: true,
@@ -110,6 +98,8 @@ class _HomePageState extends State<HomePage> {
                     userCareer: post.carreraEstudiante,
                     postText: post.descripcion,
                     postImageUrl: post.fotoPost,
+                    postReacciones: post.reacciones.toString(),
+                    postComentarios: post.comentarios.toString(),
                   );
                 },
               );
@@ -128,7 +118,6 @@ class _HomePageState extends State<HomePage> {
     if (this.usuario != null) {
       control.updateUsuario(this.usuario!);
     }
-    control.listarSecciones();
     control.listarPosts();
     return _buildBody(context);
   }

@@ -6,6 +6,8 @@ class PostCard extends StatelessWidget {
   final String userCareer;
   final String postText;
   final String postImageUrl;
+  final String postReacciones;
+  final String postComentarios;
 
   const PostCard({
     Key? key,
@@ -14,13 +16,15 @@ class PostCard extends StatelessWidget {
     required this.userCareer,
     required this.postText,
     required this.postImageUrl,
+    required this.postReacciones,
+    required this.postComentarios,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 2.0,
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -67,10 +71,12 @@ class PostCard extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(Icons.favorite_border),
                 ),
+                Text(postReacciones),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.chat_bubble_outline),
                 ),
+                Text(postComentarios),
               ],
             ),
           ],

@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/inicio',
       routes: {
         '/home': (context) => (Scaffold(
-              appBar: AppBar(title: Text('Tribu - PM 2024-2')),
               body: HomePage(),
             )),
         '/sign-in': (context) => SignInPage(),

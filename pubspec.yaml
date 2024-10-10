@@ -85,7 +85,6 @@ flutter:
         - asset: assets/fonts/Texto.ttf
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/json/secciones.json
     - assets/img/splash/splash_icon.png
     - assets/img/splash/splash_icon_dark.png
     - assets/json/post.json
