@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tribu_app/components/post_card.dart';
-import 'package:tribu_app/models/post.dart';
 import 'package:tribu_app/pages/menu/menu_page.dart';
+import 'package:tribu_app/pages/muro/muro_page.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
 import 'package:tribu_app/configs/colors.dart';
@@ -16,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   HomeController control = Get.put(HomeController());
+
   int _selectedIndex = 0;
   late Widget _body;
   Usuario? usuario;
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget _getBody(int index) {
     switch (index) {
       case 0:
-        return _bodyPestana1();
+        return MuroPage();
       case 1:
         return BuscarPage();
       case 2:
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       case 3:
         return MenuPage();
       default:
-        return Center(child: Text('Página 1'));
+        return Center(child: Text('Página no encontrada'));
     }
   }
 
@@ -107,37 +107,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _bodyPestana1() {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Obx(() {
-              return ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: control.posts.value.length,
-                itemBuilder: (context, index) {
-                  Post post = control.posts.value[index];
-                  return PostCard(
-                    profilePicUrl: post.fotoEstudiante,
-                    userName: post.nombreEstudiante,
-                    userCareer: post.carreraEstudiante,
-                    postText: post.descripcion,
-                    postImageUrl: post.fotoPost,
-                    postReacciones: post.reacciones.toString(),
-                    postComentarios: post.comentarios.toString(),
-                  );
-                },
-              );
-            }),
-          ],
-        ),
-      ),
-    );
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +117,7 @@ class _HomePageState extends State<HomePage> {
     if (this.usuario != null) {
       control.updateUsuario(this.usuario!);
     }
-    control.listarPosts();
+
     return _buildBody(context);
   }
 }
