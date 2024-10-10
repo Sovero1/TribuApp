@@ -13,14 +13,15 @@ class PerfilPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start, // Alinea todo a la izquierda
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 70),
                 Center(
                   child: CircleAvatar(
                     radius: 90,
-                    backgroundImage: AssetImage('assets/img/profile_placeholder.png'),
+                    backgroundImage: AssetImage('assets/img/splash/splash_icon_dark.png'),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -34,22 +35,20 @@ class PerfilPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 60),
+                SizedBox(height: 70),
 
                 Divider(color: AppColors.primaryColor, thickness: 2),
-
-                // Usamos un Row para alinear el texto a la izquierda
                 Row(
                   children: [
-                    Expanded( // Para asegurar que el texto ocupe todo el ancho
+                    Expanded(
                       child: Text(
-                        'Ingeniería Industrial',
+                        '  Ingeniería Industrial',
                         style: TextStyle(
                           fontFamily: 'Texto',
                           fontSize: 20,
                           color: AppColors.primaryColor,
                         ),
-                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                        textAlign: TextAlign.left,
                       ),
                     ),
                   ],
@@ -60,13 +59,13 @@ class PerfilPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        '20224857',
+                        '  20224857',
                         style: TextStyle(
                           fontFamily: 'Texto',
                           fontSize: 20,
                           color: AppColors.primaryColor,
                         ),
-                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                        textAlign: TextAlign.left, 
                       ),
                     ),
                   ],
@@ -77,20 +76,18 @@ class PerfilPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        'Universidad de Lima',
+                        '  Universidad de Lima',
                         style: TextStyle(
                           fontFamily: 'Texto',
                           fontSize: 20,
                           color: AppColors.primaryColor,
                         ),
-                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                        textAlign: TextAlign.left, 
                       ),
                     ),
                   ],
                 ),
                 Divider(color: AppColors.primaryColor, thickness: 2),
-
-                // Row para el teléfono con el ícono a la izquierda
                 Row(
                   children: [
                     Icon(Icons.phone, color: AppColors.primaryColor),
@@ -106,15 +103,15 @@ class PerfilPage extends StatelessWidget {
                   ],
                 ),
                 Divider(color: AppColors.primaryColor, thickness: 2),
-                SizedBox(height: 80),
+                SizedBox(height: 100),
 
                 Center(
                   child: SizedBox(
-                    width: 150,
+                    width: 140,
                     child: CustomButton(
                       title: 'Editar',
                       onPressed: () {
-                        Navigator.pushNamed(context, '/editar');
+                        Navigator.of(context).pushNamed('/editar');
                       },
                     ),
                   ),
