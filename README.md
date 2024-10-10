@@ -156,7 +156,12 @@ Esta pantalla es donde el usuario puede ajustar diversas opciones relacionadas c
 - Cerrar sesión: Permite al usuario salir de su cuenta de manera segura.
 
 <img src="Resources_Entrega1/11.jpg" height="350" width="190">
-
+<img src="Resources_Entrega1/12.jpg" height="350" width="190">
+<img src="Resources_Entrega1/13.jpg" height="350" width="190">
+<img src="Resources_Entrega1/14.jpg" height="350" width="190">
+<img src="Resources_Entrega1/15.jpg" height="350" width="190">
+<img src="Resources_Entrega1/16.jpg" height="350" width="190">
+<img src="Resources_Entrega1/17.jpg" height="350" width="190">
 
 ```bash
 # Clona el repositorio
