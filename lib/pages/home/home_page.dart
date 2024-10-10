@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/components/post_card.dart';
 import 'package:tribu_app/models/post.dart';
+import 'package:tribu_app/pages/menu/menu_page.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
 import 'package:tribu_app/configs/colors.dart';
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       case 2:
         return Center(child: Text('Página 3'));
       case 3:
-        return Center(child: Text('Página 4'));
+        return MenuPage();
       default:
         return Center(child: Text('Página 1'));
     }
