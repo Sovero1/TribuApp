@@ -53,27 +53,27 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          elevation: 0, // Sin sombra
-          automaticallyImplyLeading: false, // Elimina la flecha de retroceso
+          elevation: 0, 
+          automaticallyImplyLeading: false, 
           title: Text(
             'Tribu',
             style: TextStyle(
-              color: Colors.black, // Texto negro
-              fontFamily: 'Titulo', // Asegúrate de que tienes esta fuente
+              color: AppColors.primaryColor, 
+              fontFamily: 'Titulo', 
               fontSize: 24,
             ),
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.notifications_none, color: Colors.black),
+              icon: Icon(Icons.notifications_none, color: AppColors.primaryColor),
               onPressed: () {
                 // Acción de notificaciones
               },
             ),
             IconButton(
-              icon: Icon(Icons.person_outline, color: Colors.black),
+              icon: Icon(Icons.person_outline, color: AppColors.primaryColor),
               onPressed: () {
-                // Acción para perfil de usuario
+                Navigator.of(context).pushNamed('/perfil');
               },
             ),
           ],

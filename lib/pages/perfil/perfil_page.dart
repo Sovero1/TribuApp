@@ -15,57 +15,82 @@ class PerfilPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start, // Alinea todo a la izquierda
               children: [
-                CircleAvatar(
-                  radius: 100,
-                  backgroundImage: AssetImage('assets/img/profile_placeholder.png'),
+                Center(
+                  child: CircleAvatar(
+                    radius: 90,
+                    backgroundImage: AssetImage('assets/img/profile_placeholder.png'),
+                  ),
                 ),
                 SizedBox(height: 20),
-                Text(
-                  'Javier Diaz Guzmán',
-                  style: TextStyle(
-                    fontFamily: 'Titulo',
-                    fontSize: 26,
-                    color: AppColors.primaryColor,
+                Center(
+                  child: Text(
+                    'Javier Diaz Guzmán',
+                    style: TextStyle(
+                      fontFamily: 'Titulo',
+                      fontSize: 26,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
-                SizedBox(height: 30),
-                
-                Divider(color: AppColors.primaryColor, thickness: 2), 
-                Text(
-                  'Ingeniería Industrial',
-                  style: TextStyle(
-                    fontFamily: 'Texto',
-                    fontSize: 20,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                Divider(color: AppColors.primaryColor, thickness: 2), 
-                SizedBox(height: 10),
+                SizedBox(height: 60),
 
-                Text(
-                  '20224857',
-                  style: TextStyle(
-                    fontFamily: 'Texto',
-                    fontSize: 20,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                Divider(color: AppColors.primaryColor, thickness: 2), 
-                SizedBox(height: 10),
+                Divider(color: AppColors.primaryColor, thickness: 2),
 
-                Text(
-                  'Universidad de Lima',
-                  style: TextStyle(
-                    fontFamily: 'Texto',
-                    fontSize: 20,
-                    color: AppColors.primaryColor,
-                  ),
-                ),    
-                Divider(color: AppColors.primaryColor, thickness: 2),             
-                SizedBox(height: 10),
-                
+                // Usamos un Row para alinear el texto a la izquierda
+                Row(
+                  children: [
+                    Expanded( // Para asegurar que el texto ocupe todo el ancho
+                      child: Text(
+                        'Ingeniería Industrial',
+                        style: TextStyle(
+                          fontFamily: 'Texto',
+                          fontSize: 20,
+                          color: AppColors.primaryColor,
+                        ),
+                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(color: AppColors.primaryColor, thickness: 2),
+
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        '20224857',
+                        style: TextStyle(
+                          fontFamily: 'Texto',
+                          fontSize: 20,
+                          color: AppColors.primaryColor,
+                        ),
+                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(color: AppColors.primaryColor, thickness: 2),
+
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Universidad de Lima',
+                        style: TextStyle(
+                          fontFamily: 'Texto',
+                          fontSize: 20,
+                          color: AppColors.primaryColor,
+                        ),
+                        textAlign: TextAlign.left, // Alinear texto a la izquierda
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(color: AppColors.primaryColor, thickness: 2),
+
+                // Row para el teléfono con el ícono a la izquierda
                 Row(
                   children: [
                     Icon(Icons.phone, color: AppColors.primaryColor),
@@ -81,15 +106,17 @@ class PerfilPage extends StatelessWidget {
                   ],
                 ),
                 Divider(color: AppColors.primaryColor, thickness: 2),
-                SizedBox(height: 50),
-            
-                SizedBox(
-                  width: 200,
-                  child: CustomButton(
-                    title: 'Editar',
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/editar');
-                    },
+                SizedBox(height: 80),
+
+                Center(
+                  child: SizedBox(
+                    width: 150,
+                    child: CustomButton(
+                      title: 'Editar',
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/editar');
+                      },
+                    ),
                   ),
                 ),
               ],
