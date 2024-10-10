@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tribu_app/pages/menu/menu_controller.dart'; // Cambia la importación
+import 'package:tribu_app/pages/menu/menu_controller.dart';
+import 'package:tribu_app/configs/colors.dart';
+import '../../components/Custom_Button.dart'; // Importa tu componente de botón personalizado
 
 class MenuPage extends StatelessWidget {
   // Inicializa el controlador
@@ -15,66 +17,33 @@ class MenuPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: menuController.goToPerfil,
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                backgroundColor: Color(0xFFF7E2C9),
-              ),
-              child: Text(
-                'Mi perfil',
-                style: TextStyle(
-                  fontFamily: 'Texto',
-                  fontSize: 18,
-                  color: Color(0xFF393333),
-                ),
-              ),
+            CustomButton(
+              title: 'Mi perfil',
+              onPressed: () {
+                menuController.goToPerfil();
+              },
+              isOutlined: false,
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: menuController.goToCursos,
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                backgroundColor: Color(0xFFF7E2C9),
-              ),
-              child: Text(
-                'Mis cursos',
-                style: TextStyle(
-                  fontFamily: 'Texto',
-                  fontSize: 18,
-                  color: Color(0xFF393333),
-                ),
-              ),
+            CustomButton(
+              title: 'Mis cursos',
+              onPressed: () {
+                menuController.goToCursos();
+              },
+              isOutlined: false,
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: menuController.goToConfiguracion,
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                backgroundColor: Color(0xFFF7E2C9),
-              ),
-              child: Text(
-                'Configuración',
-                style: TextStyle(
-                  fontFamily: 'Texto',
-                  fontSize: 18,
-                  color: Color(0xFF393333),
-                ),
-              ),
+            CustomButton(
+              title: 'Configuración',
+              onPressed: () {
+                menuController.goToConfiguracion();
+              },
+              isOutlined: false,
             ),
           ],
         ),
       ),
-      backgroundColor: Color(0xFFF7E2C9),
+      backgroundColor: AppColors.secondaryColor,
     );
   }
 }
