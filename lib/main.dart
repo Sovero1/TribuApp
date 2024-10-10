@@ -4,7 +4,7 @@ import 'pages/home/home_page.dart';
 import 'pages/sign_in/sign_in_page.dart';
 import 'pages/sign_up/sign_up_page.dart';
 import 'pages/reset/reset_page.dart';
-// Importa la nueva página de Splash
+import 'pages/perfil/perfil_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => SignUpPage(),
         '/reset': (context) => ResetPage(),
         '/inicio': (context) => InicioPage(),
+        '/perfil': (context) => PerfilPage(),
       },
     );
   }

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/pages/menu/menu_controller.dart';
 import 'package:tribu_app/configs/colors.dart';
-import '../../components/Custom_Button.dart'; // Importa tu componente de botón personalizado
+import '../../components/Custom_Button.dart';
 
 class MenuPage extends StatelessWidget {
-  // Inicializa el controlador
   final CustomMenuController menuController = Get.put(CustomMenuController());
 
   @override
@@ -20,7 +19,7 @@ class MenuPage extends StatelessWidget {
             CustomButton(
               title: 'Mi perfil',
               onPressed: () {
-                menuController.goToPerfil();
+                Navigator.of(context).pushNamed('/perfil');
               },
               isOutlined: false,
             ),

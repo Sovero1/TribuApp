@@ -1,3 +1,3 @@
 import 'package:get/get.dart';
 
-class TemplateController extends GetxController {}
+class PerfilController extends GetxController {}
