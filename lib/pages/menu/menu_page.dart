@@ -9,27 +9,6 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage:
-                  AssetImage('assets/img/adaptive_icon_foreground.png'),
-              radius: 20.0,
-            ),
-            SizedBox(width: 10),
-            Text(
-              'Opciones',
-              style: TextStyle(
-                fontFamily: 'Texto',
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
-        backgroundColor: Color(0xFF645749),
-      ),
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Column(

@@ -6,6 +6,8 @@ import 'package:tribu_app/pages/menu/menu_page.dart';
 import '../../models/usuario.dart';
 import 'home_controller.dart';
 import 'package:tribu_app/configs/colors.dart';
+import 'package:tribu_app/pages/search/buscar_page.dart';
+import 'package:tribu_app/pages/postear/postear_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,9 +31,9 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return _bodyPestana1();
       case 1:
-        return Center(child: Text('Página 2'));
+        return BuscarPage();
       case 2:
-        return Center(child: Text('Página 3'));
+        return PostearPage();
       case 3:
         return MenuPage();
       default:
@@ -49,6 +51,33 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0, // Sin sombra
+          automaticallyImplyLeading: false, // Elimina la flecha de retroceso
+          title: Text(
+            'Tribu',
+            style: TextStyle(
+              color: Colors.black, // Texto negro
+              fontFamily: 'Titulo', // Asegúrate de que tienes esta fuente
+              fontSize: 24,
+            ),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.notifications_none, color: Colors.black),
+              onPressed: () {
+                // Acción de notificaciones
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.person_outline, color: Colors.black),
+              onPressed: () {
+                // Acción para perfil de usuario
+              },
+            ),
+          ],
+        ),
         backgroundColor:
             AppColors.secondaryColor, // Fondo beige de toda la pantalla
         body: _body,

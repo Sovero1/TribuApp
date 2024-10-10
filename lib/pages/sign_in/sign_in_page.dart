@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'sign_in_controller.dart';
 import '../../components/Custom_Button.dart';
+import 'package:tribu_app/configs/colors.dart';
 
 class SignInPage extends StatelessWidget {
   SignInController control = Get.put(SignInController());
@@ -24,7 +25,7 @@ class SignInPage extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Titulo',
               fontSize: 22,
-              color: Color(0xFF393333),
+              color: AppColors.primaryColor,
             ),
           ),
           SizedBox(height: 15),
@@ -101,7 +102,7 @@ class SignInPage extends StatelessWidget {
               '¿Olvidaste tu contraseña?',
               style: TextStyle(
                 fontFamily: 'Texto',
-                color: Color(0xFF393333),
+                color: AppColors.primaryColor,
                 decoration: TextDecoration.underline,
               ),
             ),
@@ -109,7 +110,6 @@ class SignInPage extends StatelessWidget {
         ],
       ),
     ));
-
   }
 
   @override
@@ -119,7 +119,7 @@ class SignInPage extends StatelessWidget {
         resizeToAvoidBottomInset: false,
         appBar: null,
         body: _buildBody(context),
-        backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+        backgroundColor: AppColors.secondaryColor, // Color de fondo beige
       ),
     );
   }
