@@ -27,7 +27,7 @@ class MenuPage extends StatelessWidget {
             CustomButton(
               title: 'Mis cursos',
               onPressed: () {
-                menuController.goToCursos();
+                Navigator.of(context).pushNamed('/cursos');
               },
               isOutlined: false,
             ),
@@ -35,7 +35,7 @@ class MenuPage extends StatelessWidget {
             CustomButton(
               title: 'Configuración',
               onPressed: () {
-                menuController.goToConfiguracion();
+                Navigator.of(context).pushNamed('/config');
               },
               isOutlined: false,
             ),
