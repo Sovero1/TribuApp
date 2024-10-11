@@ -104,14 +104,14 @@ class CursosPage extends StatelessWidget {
       ),
       child: ExpansionTile(
         title: Container(
-          color: AppColors.primaryColor,
+          color: AppColors.secondaryColor,
           padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
           child: Text(
             courseTitle,
             style: TextStyle(
               fontFamily: 'Titulo',
               fontSize: 18,
-              color: AppColors.secondaryColor,
+              color: AppColors.primaryColor,
             ),
           ),
         ),
