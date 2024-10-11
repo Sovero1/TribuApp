@@ -12,9 +12,9 @@ class BuscarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Elimina la flecha de retroceso
+        automaticallyImplyLeading: false, 
         title: Text(
-          'Buscar',
+          ' Buscar',
           style: TextStyle(
             fontFamily: 'Titulo',
             fontSize: 26,
@@ -32,14 +32,12 @@ class BuscarPage extends StatelessWidget {
               TextField(
                 onChanged: (value) => controller.buscar(value),
                 decoration: InputDecoration(
-                  hintText: 'CARRERA / CURSO / PROFESOR / MATERIAL',
+                  hintText: 'Carrera / Curso / Profesor / Material',
+                  hintStyle: TextStyle(color: AppColors.primaryColor.withOpacity(0.5)),
                   prefixIcon: Icon(Icons.search, color: AppColors.primaryColor),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                   filled: true,
-                  fillColor:
-                      Colors.white, // Fondo blanco para el cuadro de texto
+                  fillColor: Colors.white,
                 ),
               ),
               SizedBox(height: 20.0),
