@@ -12,6 +12,7 @@ class BuscarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           'Buscar',
           style: TextStyle(
@@ -37,7 +38,8 @@ class BuscarPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   filled: true,
-                  fillColor: Colors.white, // Fondo blanco para el cuadro de texto
+                  fillColor:
+                      Colors.white, // Fondo blanco para el cuadro de texto
                 ),
               ),
               SizedBox(height: 20.0),
@@ -55,7 +57,8 @@ class BuscarPage extends StatelessWidget {
                   // Navegar a la página BuscarProfesorPage
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BuscarProfesoresPage()),
+                    MaterialPageRoute(
+                        builder: (context) => BuscarProfesoresPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -80,7 +83,8 @@ class BuscarPage extends StatelessWidget {
                   // Navegar a la página BuscarMaterialesPage
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BuscarMaterialesPage()),
+                    MaterialPageRoute(
+                        builder: (context) => BuscarMaterialesPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -107,7 +111,8 @@ class BuscarPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       final resultado = controller.resultados[index];
                       return ListTile(
-                        leading: Icon(Icons.search, color: AppColors.primaryColor),
+                        leading:
+                            Icon(Icons.search, color: AppColors.primaryColor),
                         title: Text(
                           resultado,
                           style: TextStyle(

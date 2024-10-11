@@ -5,7 +5,6 @@ prompt chatgpt: quiero una clase en dart llamada Usuario, que tenga como atribut
 class Usuario {
   int idUsuario;
   String correo;
-
   Usuario({required this.idUsuario, required this.correo});
 
   // Método toString para representar la clase como un String
