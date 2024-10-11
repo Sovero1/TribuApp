@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tribu_app/pages/inicio/inicio_page.dart';
-import 'pages/home/home_page.dart';
-import 'pages/sign_in/sign_in_page.dart';
-import 'pages/sign_up/sign_up_page.dart';
-import 'pages/reset/reset_page.dart';
-import 'pages/perfil/perfil_page.dart';
-import 'pages/editar/editar_page.dart';
-import 'pages/cursos/cursos_page.dart';
-import 'package:tribu_app/pages/buscar_materiales/buscar_materiales_page.dart';
-import 'pages/buscar_profesores/buscar_profesores_page.dart';
+import 'package:tribu_app/pages/home/home_page.dart';
+import 'package:tribu_app/pages/sign_in/sign_in_page.dart';
+import 'package:tribu_app/pages/sign_up/sign_up_page.dart';
+import 'package:tribu_app/pages/reset/reset_page.dart';
+import 'package:tribu_app/pages/perfil/perfil_page.dart';
+import 'package:tribu_app/pages/cursos/cursos_page.dart';
+import 'package:tribu_app/pages/config/config_page.dart'; // Importa la página de configuración
 
 void main() {
   runApp(const MyApp());
@@ -25,22 +23,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // Inicia la app con el SplashScreen
       initialRoute: '/inicio',
       routes: {
-        '/home': (context) => (Scaffold(
-              body: HomePage(),
-            )),
+        '/home': (context) => HomePage(),
         '/sign-in': (context) => SignInPage(),
         '/sign-up': (context) => SignUpPage(),
         '/reset': (context) => ResetPage(),
         '/inicio': (context) => InicioPage(),
         '/perfil': (context) => PerfilPage(),
-        '/editar': (context) => EditarPage(),
         '/cursos': (context) => CursosPage(),
-        '/buscar-materiales': (context) => BuscarMaterialesPage(),
-        '/buscar-profesores': (context) => BuscarProfesoresPage(),
-      // '/config': (context) => ConfigPage(),
+        '/config': (context) => ConfigPage(), // Ruta para la página de configuración
       },
     );
   }
