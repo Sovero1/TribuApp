@@ -29,7 +29,7 @@ class SignUpPage extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Titulo',
                   fontSize: 22,
-                  color: Color(0xFF393333),
+                  color: AppColors.primaryColor,
                 ),
               ),
               SizedBox(height: 20),
