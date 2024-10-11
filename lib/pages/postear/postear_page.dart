@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tribu_app/configs/colors.dart';
 
 class PostearPage extends StatelessWidget {
   @override
@@ -63,7 +64,7 @@ class PostearPage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+      backgroundColor: AppColors.secondaryColor, // Color de fondo beige
     );
   }
 

@@ -56,8 +56,7 @@ class InicioPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: null,
       body: _buildBody(context),
-      backgroundColor:
-          AppColors.secondaryColor, // Color de fondo beige (#f7e2c9)
+      backgroundColor: AppColors.secondaryColor,
     );
   }
 }
