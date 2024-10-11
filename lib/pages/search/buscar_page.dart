@@ -12,6 +12,7 @@ class BuscarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Elimina la flecha de retroceso
         title: Text(
           'Buscar',
           style: TextStyle(
@@ -52,7 +53,6 @@ class BuscarPage extends StatelessWidget {
               SizedBox(height: 30.0),
               ElevatedButton(
                 onPressed: () {
-                  // Navegar a la página BuscarProfesorPage
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => BuscarProfesoresPage()),
@@ -77,7 +77,6 @@ class BuscarPage extends StatelessWidget {
               SizedBox(height: 20.0),
               ElevatedButton(
                 onPressed: () {
-                  // Navegar a la página BuscarMaterialesPage
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => BuscarMaterialesPage()),
