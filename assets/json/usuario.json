@@ -1,0 +1,25 @@
+[
+    {
+      "idUsuario": 1,
+      "codigo": "20204857",
+      "correo": "juan.perez@ulima.edu.pe",
+      "nombre": "Juan Perez",
+      "celular": "987654321",
+      "carrera": "Ingeniería de Sistemas",
+      "foto": "https://example.com/foto1.jpg",
+      "ciclo": "8",
+      "contrasena": "pass1234"
+    },
+    {
+      "idUsuario": 2,
+      "codigo": "20214888",
+      "correo": "ana.lopez@ulima.edu.pe",
+      "nombre": "Ana Lopez",
+      "celular": "912345678",
+      "carrera": "Psicología",
+      "foto": "https://example.com/foto2.jpg",
+      "ciclo": "5",
+      "contrasena": "pass5678"
+    }
+  ]
+  
