@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:tribu_app/configs/colors.dart';
 import 'editar_controller.dart';
 import '../../components/custom_button.dart';
+import '../../components/desplegable_ciclo.dart';
+import '../../components/desplegable_carrera.dart';
 
 class EditarPage extends StatelessWidget {
   final EditarController control = Get.put(EditarController());
@@ -45,121 +47,100 @@ class EditarPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 40),
-                Stack(
-                  alignment: Alignment
-                      .bottomRight, // Align the icon to the bottom right
-                  children: [
-                    CircleAvatar(
-                      radius: 90,
-                      backgroundImage:
-                          AssetImage('assets/img/splash/splash_icon_dark.png'),
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      right: 10,
-                      child: GestureDetector(
-                        onTap: () {
-                          // Action to edit or upload profile photo
-                        },
-                        child: CircleAvatar(
-                          backgroundColor: AppColors.primaryColor,
-                          radius: 24,
-                          child: Icon(
-                            Icons.add_a_photo,
-                            color: AppColors.secondaryColor,
-                            size: 22,
-                          ),
+                SizedBox(height: 20),
+                  TextField(
+                        controller: control.txtCodigo,
+                        decoration: InputDecoration(
+                        labelText: 'CODIGO',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Texto',
+                            color: AppColors.primaryColor,
                         ),
-                      ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                        ),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                        ),
                     ),
-                  ],
+                    SizedBox(height: 20),
+                    TextField(
+                    controller: control.txtNombre,
+                    decoration: InputDecoration(
+                    labelText: 'NOMBRE',
+                    labelStyle: TextStyle(
+                        fontFamily: 'Texto',
+                        color: AppColors.primaryColor,
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                    ),
                 ),
                 SizedBox(height: 20),
-                Text(
-                  'Javier Diaz Guzmán',
-                  style: TextStyle(
-                    fontFamily: 'Titulo',
-                    fontSize: 26,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-                SizedBox(height: 40),
-                Divider(color: AppColors.primaryColor, thickness: 2),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        '  Ingeniería Industrial',
-                        style: TextStyle(
-                          fontFamily: 'Texto',
-                          fontSize: 20,
-                          color: AppColors.primaryColor,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(color: AppColors.primaryColor, thickness: 2),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        '  20224857',
-                        style: TextStyle(
-                          fontFamily: 'Texto',
-                          fontSize: 20,
-                          color: AppColors.primaryColor,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(color: AppColors.primaryColor, thickness: 2),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        '  Universidad de Lima',
-                        style: TextStyle(
-                          fontFamily: 'Texto',
-                          fontSize: 20,
-                          color: AppColors.primaryColor,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(color: AppColors.primaryColor, thickness: 2),
-                Row(
-                  children: [
-                    Icon(Icons.phone, color: AppColors.primaryColor),
-                    SizedBox(width: 10),
-                    Text(
-                      '98566394',
-                      style: TextStyle(
+                TextField(
+                    controller: control.txtCorreo,
+                    decoration: InputDecoration(
+                    labelText: 'CORREO',
+                    labelStyle: TextStyle(
                         fontFamily: 'Texto',
-                        fontSize: 20,
                         color: AppColors.primaryColor,
-                      ),
                     ),
-                  ],
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                    ),
                 ),
-                Divider(color: AppColors.primaryColor, thickness: 2),
-                SizedBox(height: 50),
-                Center(
-                  child: SizedBox(
-                    width: 140,
-                    child: CustomButton(
-                      title: 'Guardar',
-                      onPressed: () {
-                        // guardar
-                      },
+                SizedBox(height: 20),
+                TextField(
+                    controller: control.txtCelular,
+                    decoration: InputDecoration(
+                    labelText: 'CELULAR',
+                    labelStyle: TextStyle(
+                        fontFamily: 'Texto',
+                        color: AppColors.primaryColor,
                     ),
-                  ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                    ),
+                ),
+                SizedBox(height: 20),
+                CicloDropdown(
+                    selectedCiclo: control.selectedCiclo,
+                    onChanged: (String? newValue) {
+                    control.selectedCiclo = newValue!;
+                    },
+                ),
+                SizedBox(height: 20),                
+                CarreraDropdown(
+                    selectedCarrera: control.selectedCarrera,
+                    onChanged: (String? newValue) {
+                    control.selectedCarrera = newValue!;
+                    },
+                ),
+                SizedBox(height: 20),
+                Row(
+                    children: [
+                        Icon(Icons.add_a_photo, color: AppColors.primaryColor),
+                        SizedBox(width: 10),
+                        Text(
+                            'FOTO',
+                            style: TextStyle(
+                            fontFamily: 'Texto',
+                            color: AppColors.primaryColor,
+                            ),
+                        ),
+                    ],
+                ),
+                SizedBox(height: 200),
+                CustomButton(
+                    title: 'Guardar',
+                    onPressed: () {
+                    control.editAccount(context);
+                    },
                 ),
               ],
             ),

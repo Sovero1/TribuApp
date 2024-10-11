@@ -58,8 +58,8 @@ class CursosPage extends StatelessWidget {
                 context,
                 'Programación Orientada a Objetos   |   4',
                 'Profesor: Pablo Rojas',
-                'Lunes 3:00 - 6:00 pm\nJueves 10:00 am - 12:00 pm',
-                'Lunes 12:00 pm - 1:00 pm',
+                '  Lunes 3:00 - 6:00 pm\n  Jueves 10:00 am - 12:00 pm',
+                '   Lunes 12:00 pm - 1:00 pm',
                 [
                   'EV1-2018-2',
                   'Ejemplo-Herencia',
@@ -73,8 +73,8 @@ class CursosPage extends StatelessWidget {
                 context,
                 'Algoritmos   |   3',
                 'Profesor: Carla López',
-                'Martes 2:00 - 5:00 pm\nViernes 9:00 am - 11:00 am',
-                'Miércoles 11:00 am - 12:00 pm',
+                '  Martes 2:00 - 5:00 pm\n   Viernes 9:00 am - 11:00 am',
+                '   Miércoles 11:00 am - 12:00 pm',
                 [
                   'EV1-2019-1',
                   'Ejemplo-Algoritmos-Básicos',
@@ -135,7 +135,7 @@ class CursosPage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Horario:\n     $schedule',
+                    'Horario:\n $schedule',
                     style: TextStyle(
                       fontFamily: 'Texto',
                       fontSize: 18,
@@ -144,7 +144,7 @@ class CursosPage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Asesoría:\n     $advisory',
+                    'Asesoría:\n $advisory',
                     style: TextStyle(
                       fontFamily: 'Texto',
                       fontSize: 18,
