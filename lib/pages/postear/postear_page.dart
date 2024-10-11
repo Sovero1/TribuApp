@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tribu_app/configs/colors.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/configs/colors.dart';
 import 'postear_controller.dart';
@@ -43,75 +44,83 @@ class PostearPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-            child: Column(
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Barra de escritura de post
+            Row(
               children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('assets/img/sample-profile-image.png'),
-                      radius: 25,
-                    ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      child: TextField(
-                        onChanged: (value) => controller.updatePostText(value),
-                        decoration: InputDecoration(
-                          hintText: '¿Qué quieres compartir hoy?',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                          suffixIcon: Icon(Icons.edit, color: AppColors.primaryColor),
-                        ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/img/user_profile.png'),
+                  radius: 25.0,
+                ),
+                SizedBox(width: 10.0),
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: '¿Qué quieres compartir hoy?',
+                      suffixIcon: Icon(Icons.edit),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                        borderSide: BorderSide.none,
                       ),
+                      filled: true,
+                      fillColor: Colors.grey[200],
                     ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      _buildOptionButton('PPT', Icons.picture_as_pdf),
-                      SizedBox(width: 10),
-                      _buildOptionButton('PDF', Icons.picture_as_pdf),
-                      SizedBox(width: 10),
-                      _buildOptionButton('Excel', Icons.table_chart),
-                      SizedBox(width: 10),
-                      _buildOptionButton('Imagen', Icons.image),
-                      SizedBox(width: 10),
-                      _buildOptionButton('Actividad', Icons.event),
-                    ],
                   ),
-                ),
-                SizedBox(height: 20),
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: examplePosts.length,
-                  itemBuilder: (context, index) {
-                    final post = examplePosts[index];
-                    return _buildPostCard(
-                      name: post['name']!,
-                      career: post['career']!,
-                      text: post['text']!,
-                      image: post['image']!,
-                    );
-                  },
                 ),
               ],
             ),
-          ),
+            SizedBox(height: 10.0),
+            // Fila de opciones para subir archivos
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildOptionButton('PPT'),
+                _buildOptionButton('PDF'),
+                _buildOptionButton('Excel'),
+                _buildOptionButton('Imagen'),
+                _buildOptionButton('Actividad'),
+              ],
+            ),
+            SizedBox(height: 15.0),
+            // Post del usuario
+            Expanded(
+              child: ListView(
+                children: [
+                  _buildPost(
+                    context,
+                    'Javier Diaz Guzmán',
+                    'Ingeniería Industrial',
+                    'Primer día de clases de tercer ciclo, ¿qué profesores me recomiendan? 👌',
+                    'assets/img/sample_post_image.png',
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
-      backgroundColor: AppColors.secondaryColor,
+      backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+    );
+  }
+
+  Widget _buildOptionButton(String text) {
+    return ElevatedButton(
+      onPressed: () {
+        // Acción para la opción
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.grey[200], // Color del botón actualizado
+        foregroundColor: Colors.black, // Color del texto actualizado
+        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25.0),
+        ),
+      ),
+      child: Text(text),
     );
   }
 

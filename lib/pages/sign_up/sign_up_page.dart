@@ -4,6 +4,7 @@ import 'sign_up_controller.dart';
 import '../../components/custom_button.dart';
 import '../../components/desplegable_ciclo.dart'; // Importa el componente de Ciclo
 import '../../components/desplegable_carrera.dart'; // Importa el componente de Carrera
+import 'package:tribu_app/configs/colors.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpController control = Get.put(SignUpController());
@@ -28,7 +29,7 @@ class SignUpPage extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Titulo',
                   fontSize: 22,
-                  color: Color(0xFF393333),
+                  color: AppColors.primaryColor,
                 ),
               ),
               SizedBox(height: 20),
@@ -39,7 +40,7 @@ class SignUpPage extends StatelessWidget {
                   labelText: 'CODIGO',
                   labelStyle: TextStyle(
                     fontFamily: 'Texto',
-                    color: Color(0xFF393333),
+                    color: AppColors.primaryColor,
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -55,7 +56,7 @@ class SignUpPage extends StatelessWidget {
                   labelText: 'NOMBRE',
                   labelStyle: TextStyle(
                     fontFamily: 'Texto',
-                    color: Color(0xFF393333),
+                    color: AppColors.primaryColor,
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -71,7 +72,7 @@ class SignUpPage extends StatelessWidget {
                   labelText: 'CORREO',
                   labelStyle: TextStyle(
                     fontFamily: 'Texto',
-                    color: Color(0xFF393333),
+                    color: AppColors.primaryColor,
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -87,7 +88,7 @@ class SignUpPage extends StatelessWidget {
                   labelText: 'CELULAR',
                   labelStyle: TextStyle(
                     fontFamily: 'Texto',
-                    color: Color(0xFF393333),
+                    color: AppColors.primaryColor,
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -120,7 +121,7 @@ class SignUpPage extends StatelessWidget {
                   labelText: 'CONTRASEÑA NUEVA',
                   labelStyle: TextStyle(
                     fontFamily: 'Texto',
-                    color: Color(0xFF393333),
+                    color: AppColors.primaryColor,
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -132,13 +133,13 @@ class SignUpPage extends StatelessWidget {
               // Campo de Subir Foto
               Row(
                 children: [
-                  Icon(Icons.add_a_photo, color: Color(0xFF645749)),
+                  Icon(Icons.add_a_photo, color: AppColors.primaryColor),
                   SizedBox(width: 10),
                   Text(
                     'FOTO',
                     style: TextStyle(
                       fontFamily: 'Texto',
-                      color: Color(0xFF393333),
+                      color: AppColors.primaryColor,
                     ),
                   ),
                 ],
@@ -159,7 +160,7 @@ class SignUpPage extends StatelessWidget {
                     '¿Ya tienes una cuenta?',
                     style: TextStyle(
                       fontFamily: 'Texto',
-                      color: Color(0xFF393333),
+                      color: AppColors.primaryColor,
                     ),
                   ),
                   SizedBox(width: 5),
@@ -172,7 +173,7 @@ class SignUpPage extends StatelessWidget {
                       'Ingresa',
                       style: TextStyle(
                         fontFamily: 'Texto',
-                        color: Color(0xFF645749),
+                        color: AppColors.primaryColor,
                         decoration: TextDecoration.underline,
                       ),
                     ),
@@ -192,7 +193,7 @@ class SignUpPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: null,
       body: _buildBody(context),
-      backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+      backgroundColor: AppColors.secondaryColor, // Color de fondo beige
     );
   }
 }

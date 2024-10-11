@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tribu_app/configs/colors.dart';
 import 'reset_controller.dart';
 import '../../components/custom_button.dart'; // Importa el botón personalizado
 
@@ -74,7 +75,7 @@ class ResetPage extends StatelessWidget {
                       'Ingresa',
                       style: TextStyle(
                         fontFamily: 'Texto',
-                        color: Color(0xFF645749),
+                        color: AppColors.primaryColor,
                         decoration: TextDecoration.underline,
                       ),
                     ),
@@ -95,7 +96,7 @@ class ResetPage extends StatelessWidget {
         resizeToAvoidBottomInset: false,
         appBar: null,
         body: _buildBody(context),
-        backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
+        backgroundColor: AppColors.secondaryColor, // Color de fondo beige
       ),
     );
   }
