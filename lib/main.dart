@@ -5,6 +5,7 @@ import 'pages/sign_in/sign_in_page.dart';
 import 'pages/sign_up/sign_up_page.dart';
 import 'pages/reset/reset_page.dart';
 import 'pages/perfil/perfil_page.dart';
+import 'pages/editar/editar_page.dart';
 import 'pages/cursos/cursos_page.dart';
 import 'package:tribu_app/pages/buscar_materiales/buscar_materiales_page.dart';
 import 'pages/buscar_profesores/buscar_profesores_page.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/reset': (context) => ResetPage(),
         '/inicio': (context) => InicioPage(),
         '/perfil': (context) => PerfilPage(),
+        '/editar': (context) => EditarPage(),
         '/cursos': (context) => CursosPage(),
         '/buscar-materiales': (context) => BuscarMaterialesPage(),
         '/buscar-profesores': (context) => BuscarProfesoresPage(),

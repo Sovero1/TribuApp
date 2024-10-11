@@ -48,7 +48,7 @@ class PerfilPage extends StatelessWidget {
                 SizedBox(height: 40),
                 Stack(
                   alignment: Alignment
-                      .bottomRight, // Align the icon to the bottom right
+                      .bottomRight, 
                   children: [
                     CircleAvatar(
                       radius: 90,
@@ -60,7 +60,7 @@ class PerfilPage extends StatelessWidget {
                       right: 10,
                       child: GestureDetector(
                         onTap: () {
-                          // Action to edit or upload profile photo
+                          Navigator.of(context).pushNamed('/editar');
                         },
                         child: CircleAvatar(
                           backgroundColor: AppColors.primaryColor,
@@ -139,7 +139,7 @@ class PerfilPage extends StatelessWidget {
                     Icon(Icons.phone, color: AppColors.primaryColor),
                     SizedBox(width: 10),
                     Text(
-                      '98566394',
+                      '985663945',
                       style: TextStyle(
                         fontFamily: 'Texto',
                         fontSize: 20,
