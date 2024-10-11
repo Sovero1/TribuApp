@@ -10,27 +10,28 @@ class ConfigPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        automaticallyImplyLeading: false, // Removes back button
         title: Text(
           'Tribu',
           style: TextStyle(
-            fontFamily: 'Titulo',
-            fontSize: 26,
             color: AppColors.primaryColor,
+            fontFamily: 'Titulo',
+            fontSize: 24,
           ),
         ),
-        backgroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications, color: AppColors.primaryColor),
+            icon: Icon(Icons.notifications_none, color: AppColors.primaryColor),
             onPressed: () {
-              // Acción para notificaciones
+              // Notification action
             },
           ),
           IconButton(
-            icon: Icon(Icons.person, color: AppColors.primaryColor),
+            icon: Icon(Icons.person_outline, color: AppColors.primaryColor),
             onPressed: () {
-              // Acción para perfil de usuario
+              Navigator.of(context).pushNamed('/perfil');
             },
           ),
         ],
@@ -41,10 +42,12 @@ class ConfigPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
-              _buildConfigButton('Notificaciones', Icons.notifications, context),
+              _buildConfigButton(
+                  'Notificaciones', Icons.notifications, context),
               _buildConfigButton('Visualización', Icons.visibility, context),
               _buildConfigButton('Archivos', Icons.folder, context),
-              _buildConfigButton('Publicaciones guardadas', Icons.bookmark, context),
+              _buildConfigButton(
+                  'Publicaciones guardadas', Icons.bookmark, context),
               _buildConfigButton('Cambiar contraseña', Icons.lock, context),
               _buildConfigButton('Cerrar Sesión', Icons.exit_to_app, context),
             ],
