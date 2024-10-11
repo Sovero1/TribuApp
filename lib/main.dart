@@ -6,7 +6,8 @@ import 'pages/sign_up/sign_up_page.dart';
 import 'pages/reset/reset_page.dart';
 import 'pages/perfil/perfil_page.dart';
 import 'pages/cursos/cursos_page.dart';
-import 'pages/config/config_page.dart';
+import 'package:tribu_app/pages/buscar_materiales/buscar_materiales_page.dart';
+import 'pages/buscar_profesores/buscar_profesores_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,8 @@ class MyApp extends StatelessWidget {
         '/inicio': (context) => InicioPage(),
         '/perfil': (context) => PerfilPage(),
         '/cursos': (context) => CursosPage(),
+        '/buscar-materiales': (context) => BuscarMaterialesPage(),
+        '/buscar-profesores': (context) => BuscarProfesoresPage(),
       // '/config': (context) => ConfigPage(),
       },
     );
