@@ -53,19 +53,20 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          elevation: 0, 
-          automaticallyImplyLeading: false, 
+          elevation: 0,
+          automaticallyImplyLeading: false,
           title: Text(
             'Tribu',
             style: TextStyle(
-              color: AppColors.primaryColor, 
-              fontFamily: 'Titulo', 
+              color: AppColors.primaryColor,
+              fontFamily: 'Titulo',
               fontSize: 24,
             ),
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.notifications_none, color: AppColors.primaryColor),
+              icon:
+                  Icon(Icons.notifications_none, color: AppColors.primaryColor),
               onPressed: () {
                 // Acción de notificaciones
               },
@@ -106,8 +107,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  
 
   @override
   Widget build(BuildContext context) {
