@@ -6,6 +6,7 @@ import 'package:tribu_app/pages/sign_up/sign_up_page.dart';
 import 'package:tribu_app/pages/reset/reset_page.dart';
 import 'package:tribu_app/pages/perfil/perfil_page.dart';
 import 'package:tribu_app/pages/cursos/cursos_page.dart';
+import 'package:tribu_app/pages/editar/editar_page.dart';
 import 'package:tribu_app/pages/config/config_page.dart'; // Importa la página de configuración
 
 void main() {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/inicio': (context) => InicioPage(),
         '/perfil': (context) => PerfilPage(),
         '/cursos': (context) => CursosPage(),
+        '/editar': (context) => EditarPage(),
         '/config': (context) => ConfigPage(), // Ruta para la página de configuración
       },
     );
