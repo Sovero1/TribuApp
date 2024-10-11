@@ -22,18 +22,19 @@ class BuscarMaterialesPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               TextField(
                 onChanged: (value) => controller.buscar(value),
                 decoration: InputDecoration(
-                  hintText: 'Buscar materiales...',
+                  hintText: 'Buscar material...',
                   prefixIcon: Icon(Icons.search, color: AppColors.primaryColor),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.primaryColor),
                   ),
+                  filled: true,
+                  fillColor: Colors.white, // Fondo blanco para el cuadro de texto
                 ),
               ),
               SizedBox(height: 20),
@@ -54,7 +55,7 @@ class BuscarMaterialesPage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          // Acción al seleccionar un material
+                          // Acción al seleccionar un material (puede ser mostrar detalles)
                         },
                       );
                     },

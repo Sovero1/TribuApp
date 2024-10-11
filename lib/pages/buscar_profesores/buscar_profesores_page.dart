@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/configs/colors.dart';
-import 'buscar_profesores_controller.dart'; // Controlador para la lógica de búsqueda
+import 'buscar_profesores_controller.dart';
 
 class BuscarProfesoresPage extends StatelessWidget {
   final BuscarProfesoresController controller = Get.put(BuscarProfesoresController());

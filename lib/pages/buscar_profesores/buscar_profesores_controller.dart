@@ -3,20 +3,29 @@ import 'package:get/get.dart';
 class BuscarProfesoresController extends GetxController {
   var profesores = <String>[].obs;
 
+  // Lista completa de profesores
+  final List<String> todosLosProfesores = [
+    'Pablo Rojas',
+    'Carla López',
+    'Luis Martínez',
+    'Ana García',
+    'Jorge Fernández'
+  ];
+
+  @override
+  void onInit() {
+    super.onInit();
+    // Al iniciar, mostramos todos los profesores
+    profesores.value = todosLosProfesores;
+  }
+
   void buscar(String query) {
-    // Lógica de búsqueda para filtrar profesores
-    // Puedes agregar tu lógica para buscar en una lista de profesores
-    // Aquí se muestra una lista de ejemplo para la demostración:
     if (query.isEmpty) {
-      profesores.value = [];
+      profesores.value = todosLosProfesores;
     } else {
-      profesores.value = [
-        'Pablo Rojas',
-        'Carla López',
-        'Luis Martínez',
-        'Ana García',
-        'Jorge Fernández'
-      ].where((profesor) => profesor.toLowerCase().contains(query.toLowerCase())).toList();
+      profesores.value = todosLosProfesores
+          .where((profesor) => profesor.toLowerCase().contains(query.toLowerCase()))
+          .toList();
     }
   }
 }
