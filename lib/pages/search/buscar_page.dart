@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tribu_app/configs/colors.dart';
+import 'package:tribu_app/pages/buscar_materiales/buscar_materiales_page.dart';
+import 'package:tribu_app/pages/buscar_profesores/buscar_profesores_page.dart'; // Asegúrate de tener esta importación
 
 class BuscarPage extends StatelessWidget {
   @override
@@ -33,10 +35,11 @@ class BuscarPage extends StatelessWidget {
             SizedBox(height: 30.0),
             ElevatedButton(
               onPressed: () {
-                // Acción para buscar profesores
+                // Navegar a la página BuscarProfesorPage
+                Navigator.pushNamed(context, '/buscar-profesores');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryColor, // Marrón oscuro
+                backgroundColor: AppColors.primaryColor, // Color personalizado
                 padding: EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
@@ -54,10 +57,11 @@ class BuscarPage extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Acción para buscar materiales
+                // Navegar a la página BuscarMaterialesPage
+                Navigator.pushNamed(context, '/buscar-materiales');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryColor, // Marrón oscuro
+                backgroundColor: AppColors.primaryColor, // Color personalizado
                 padding: EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
@@ -75,7 +79,7 @@ class BuscarPage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: AppColors.secondaryColor, // Color de fondo beige
+      backgroundColor: AppColors.secondaryColor, // Color de fondo
     );
   }
 }
