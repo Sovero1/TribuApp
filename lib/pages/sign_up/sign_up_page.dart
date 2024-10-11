@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'sign_up_controller.dart';
-import '../../components/custom_button.dart'; // Importa el componente de botón
+import '../../components/custom_button.dart';
+import '../../components/desplegable_ciclo.dart'; // Importa el componente de Ciclo
+import '../../components/desplegable_carrera.dart'; // Importa el componente de Carrera
 
 class SignUpPage extends StatelessWidget {
   SignUpController control = Get.put(SignUpController());
@@ -35,8 +37,10 @@ class SignUpPage extends StatelessWidget {
                 controller: control.txtCodigo,
                 decoration: InputDecoration(
                   labelText: 'CODIGO',
-                  labelStyle:
-                      TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+                  labelStyle: TextStyle(
+                    fontFamily: 'Texto',
+                    color: Color(0xFF393333),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -49,8 +53,10 @@ class SignUpPage extends StatelessWidget {
                 controller: control.txtNombre,
                 decoration: InputDecoration(
                   labelText: 'NOMBRE',
-                  labelStyle:
-                      TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+                  labelStyle: TextStyle(
+                    fontFamily: 'Texto',
+                    color: Color(0xFF393333),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -63,8 +69,10 @@ class SignUpPage extends StatelessWidget {
                 controller: control.txtCorreo,
                 decoration: InputDecoration(
                   labelText: 'CORREO',
-                  labelStyle:
-                      TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+                  labelStyle: TextStyle(
+                    fontFamily: 'Texto',
+                    color: Color(0xFF393333),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -72,31 +80,78 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15),
-
+              // Campo de Celular
               TextField(
-                controller: control.txtContrasenia,
-                obscureText: true,
+                controller: control.txtCelular,
                 decoration: InputDecoration(
-                  labelText: 'CONTRASEÑA NUEVA',
-                  labelStyle:
-                      TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+                  labelText: 'CELULAR',
+                  labelStyle: TextStyle(
+                    fontFamily: 'Texto',
+                    color: Color(0xFF393333),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
                   contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
                 ),
               ),
+              SizedBox(height: 15),
+              // Menú desplegable de Ciclo
+              CicloDropdown(
+                selectedCiclo: control.selectedCiclo,
+                onChanged: (String? newValue) {
+                  control.selectedCiclo = newValue!;
+                },
+              ),
+              SizedBox(height: 15),
+              // Menú desplegable de Carrera
+              CarreraDropdown(
+                selectedCarrera: control.selectedCarrera,
+                onChanged: (String? newValue) {
+                  control.selectedCarrera = newValue!;
+                },
+              ),
+              SizedBox(height: 15),
+              // Campo de Contraseña
+              TextField(
+                controller: control.txtContrasenia,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'CONTRASEÑA NUEVA',
+                  labelStyle: TextStyle(
+                    fontFamily: 'Texto',
+                    color: Color(0xFF393333),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                ),
+              ),
+              SizedBox(height: 15),
+              // Campo de Subir Foto
+              Row(
+                children: [
+                  Icon(Icons.add_a_photo, color: Color(0xFF645749)),
+                  SizedBox(width: 10),
+                  Text(
+                    'FOTO',
+                    style: TextStyle(
+                      fontFamily: 'Texto',
+                      color: Color(0xFF393333),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(height: 20),
-
+              // Botón de Crear
               CustomButton(
                 title: 'Crear',
                 onPressed: () {
-                  print('Crear cuenta presionado');
                   control.createAccount(context); // Método para crear cuenta
                 },
               ),
               SizedBox(height: 20),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -133,13 +188,11 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: null,
-        body: _buildBody(context),
-        backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
-      ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: null,
+      body: _buildBody(context),
+      backgroundColor: Color(0xFFF7E2C9), // Color de fondo beige
     );
   }
 }

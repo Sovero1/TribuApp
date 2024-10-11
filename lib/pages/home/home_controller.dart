@@ -1,4 +1,3 @@
-
 import 'package:get/get.dart';
 import 'package:tribu_app/services/post_service.dart';
 import '../../models/usuario.dart';
