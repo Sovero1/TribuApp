@@ -23,6 +23,14 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    final args = Get.arguments;
+
+    if (args != null && args is Map<String, dynamic>) {
+      usuario = Usuario.fromMap(args);
+    } else {
+      // Maneja el caso en que no hay argumentos
+      usuario = null;
+    } // o inicializa un usuario por defecto
     _body = _getBody(_selectedIndex);
   }
 
@@ -110,12 +118,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> args =
-        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    this.usuario = Usuario.fromMap(args);
+    /*this.usuario = Usuario.fromMap(args);
     if (this.usuario != null) {
       control.updateUsuario(this.usuario!);
-    }
+    }*/
 
     return _buildBody(context);
   }

@@ -3,16 +3,16 @@ import 'package:tribu_app/services/post_service.dart';
 import '../../models/usuario.dart';
 
 class HomeController extends GetxController {
-  var usuario = Usuario(idUsuario: 0, correo: '').obs;
+  /*var usuario = Usuario(idUsuario: 0, correo: '').obs;*/
 
   PostService postService = PostService();
 
-  void updateUsuario(Usuario u) {
+  /*void updateUsuario(Usuario u) {
     Future.delayed(Duration(seconds: 5), () {
       usuario.update((val) {
         val?.idUsuario = u.idUsuario;
         val?.correo = u.correo;
       });
     });
-  }
+  }*/
 }

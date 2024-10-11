@@ -91,6 +91,7 @@ flutter:
     - assets/img/adaptive_icon_foreground.png
     - assets/img/sample-post-image.png
     - assets/img/sample-profile-image.png
+    - assets/json/usuarios.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

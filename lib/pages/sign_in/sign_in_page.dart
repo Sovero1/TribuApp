@@ -80,7 +80,7 @@ class SignInPage extends StatelessWidget {
           CustomButton(
             title: 'Ingresa',
             onPressed: () {
-              control.goHome(context);
+              control.login(context);
             },
           ),
           SizedBox(height: 15),

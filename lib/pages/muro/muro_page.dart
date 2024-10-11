@@ -4,11 +4,9 @@ import 'package:tribu_app/components/post_card.dart';
 import 'package:tribu_app/models/post.dart';
 import 'package:tribu_app/pages/muro/muro_controller.dart';
 
+class MuroPage extends StatelessWidget {
+  MuroController control = Get.put(MuroController());
 
-
-class MuroPage extends StatelessWidget{
-  MuroController control =Get.put(MuroController());
-  
   Widget _buildBody(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
@@ -40,7 +38,7 @@ class MuroPage extends StatelessWidget{
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     control.listarPosts();
