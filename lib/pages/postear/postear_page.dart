@@ -197,17 +197,17 @@ class PostearPage extends StatelessWidget {
       onPressed: () {
         // Acción para cada opción de archivo
       },
-      icon: Icon(icon, color: AppColors.primaryColor),
+      icon: Icon(icon, color: AppColors.secondaryColor), // Cambiado a AppColors.secondaryColor
       label: Text(
         label,
         style: TextStyle(
           fontFamily: 'Titulo',
           fontSize: 14,
-          color: AppColors.primaryColor,
+          color: AppColors.secondaryColor, // Cambiado a AppColors.secondaryColor
         ),
       ),
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.secondaryColor,
+        backgroundColor: AppColors.primaryColor, // Cambiado a AppColors.primaryColor
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
