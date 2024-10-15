@@ -11,7 +11,8 @@ class PostearPage extends StatelessWidget {
     {
       'name': 'Javier Diaz Guzmán',
       'career': 'Ingeniería Industrial',
-      'text': 'Primer día de clases de tercer ciclo, ¿qué profesores me recomiendan? 😅',
+      'text':
+          'Primer día de clases de tercer ciclo, ¿qué profesores me recomiendan? 😅',
       'image': 'assets/img/sample-post-image.png',
     },
     {
@@ -46,13 +47,15 @@ class PostearPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             child: Column(
               children: [
                 Row(
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage('assets/img/sample-profile-image.png'),
+                      backgroundImage:
+                          AssetImage('assets/img/sample-profile-image.png'),
                       radius: 25,
                     ),
                     SizedBox(width: 10),
@@ -67,7 +70,8 @@ class PostearPage extends StatelessWidget {
                           ),
                           filled: true,
                           fillColor: Colors.white,
-                          suffixIcon: Icon(Icons.edit, color: AppColors.primaryColor),
+                          suffixIcon:
+                              Icon(Icons.edit, color: AppColors.primaryColor),
                         ),
                       ),
                     ),
@@ -123,7 +127,7 @@ class PostearPage extends StatelessWidget {
   }) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 10),
-      color: Colors.white.withOpacity(0.8),
+      color: Colors.white,
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -173,7 +177,8 @@ class PostearPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
-                  icon: Icon(Icons.favorite_border, color: AppColors.primaryColor),
+                  icon: Icon(Icons.favorite_border,
+                      color: AppColors.primaryColor),
                   onPressed: () {
                     // Acción para dar like
                   },
@@ -197,17 +202,21 @@ class PostearPage extends StatelessWidget {
       onPressed: () {
         // Acción para cada opción de archivo
       },
-      icon: Icon(icon, color: AppColors.secondaryColor), // Cambiado a AppColors.secondaryColor
+      icon: Icon(icon,
+          color:
+              AppColors.secondaryColor), // Cambiado a AppColors.secondaryColor
       label: Text(
         label,
         style: TextStyle(
           fontFamily: 'Titulo',
           fontSize: 14,
-          color: AppColors.secondaryColor, // Cambiado a AppColors.secondaryColor
+          color:
+              AppColors.secondaryColor, // Cambiado a AppColors.secondaryColor
         ),
       ),
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primaryColor, // Cambiado a AppColors.primaryColor
+        backgroundColor:
+            AppColors.primaryColor, // Cambiado a AppColors.primaryColor
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),

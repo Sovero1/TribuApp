@@ -1,0 +1,24 @@
+[
+  {
+    "idAlumno": 1,
+    "codigo": "20210274",
+    "correo": "20210274@aloe.ulima.edu.pe",
+    "nombre": "Andrea Barro",
+    "celular": "987654321",
+    "carrera": "Ingeniería de Sistemas",
+    "foto": "https://example.com/foto1.jpg",
+    "ciclo": 5,
+    "contrasena": "1234"
+  },
+  {
+    "idAlumno": 2,
+    "codigo": "20214446",
+    "correo": "20214446@aloe.ulima.edu.pe",
+    "nombre": "Crisbeth Sovero",
+    "celular": "912345678",
+    "carrera": "Ingeniería de Sistemas",
+    "foto": "https://example.com/foto2.jpg",
+    "ciclo": 8,
+    "contrasena": "5678"
+  }
+]

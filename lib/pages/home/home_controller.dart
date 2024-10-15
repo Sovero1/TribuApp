@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:tribu_app/services/post_service.dart';
-import '../../models/usuario.dart';
 
 class HomeController extends GetxController {
   /*var usuario = Usuario(idUsuario: 0, correo: '').obs;*/

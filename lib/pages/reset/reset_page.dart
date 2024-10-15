@@ -27,7 +27,7 @@ class ResetPage extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Titulo',
                   fontSize: 22,
-                  color: Color(0xFF393333),
+                  color: AppColors.primaryColor,
                 ),
               ),
               SizedBox(height: 20),
@@ -36,8 +36,8 @@ class ResetPage extends StatelessWidget {
                 controller: control.txtCorreo,
                 decoration: InputDecoration(
                   labelText: 'CORREO',
-                  labelStyle:
-                      TextStyle(fontFamily: 'Texto', color: Color(0xFF393333)),
+                  labelStyle: TextStyle(
+                      fontFamily: 'Texto', color: AppColors.primaryColor),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -62,7 +62,7 @@ class ResetPage extends StatelessWidget {
                     '¿Ya tienes una cuenta?',
                     style: TextStyle(
                       fontFamily: 'Texto',
-                      color: Color(0xFF393333),
+                      color: AppColors.primaryColor,
                     ),
                   ),
                   SizedBox(width: 5),
