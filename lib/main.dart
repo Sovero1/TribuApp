@@ -9,6 +9,7 @@ import 'package:tribu_app/pages/cursos/cursos_page.dart';
 import 'package:tribu_app/pages/editar/editar_page.dart';
 import 'package:tribu_app/pages/postear/postear_page.dart';
 import 'package:tribu_app/pages/config/config_page.dart'; // Importa la página de configuración
+import 'package:tribu_app/pages/change_password/change_password_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,9 @@ class MyApp extends StatelessWidget {
         '/cursos': (context) => CursosPage(),
         '/editar': (context) => EditarPage(),
         '/postear': (context) => PostearPage(),
-        '/config': (context) => ConfigPage(), // Ruta para la página de configuración
+        '/config': (context) => ConfigPage(),
+        '/change': (context) =>
+            ChangePasswordPage(), // Ruta para la página de configuración
       },
     );
   }

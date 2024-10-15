@@ -42,14 +42,30 @@ class ConfigPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
+              _buildConfigButton('Notificaciones', Icons.notifications, context,
+                  () {
+                // Acción para Notificaciones
+              }),
+              _buildConfigButton('Visualización', Icons.visibility, context,
+                  () {
+                // Acción para Visualización
+              }),
+              _buildConfigButton('Archivos', Icons.folder, context, () {
+                // Acción para Archivos
+              }),
               _buildConfigButton(
-                  'Notificaciones', Icons.notifications, context),
-              _buildConfigButton('Visualización', Icons.visibility, context),
-              _buildConfigButton('Archivos', Icons.folder, context),
-              _buildConfigButton(
-                  'Publicaciones guardadas', Icons.bookmark, context),
-              _buildConfigButton('Cambiar contraseña', Icons.lock, context),
-              _buildConfigButton('Cerrar Sesión', Icons.exit_to_app, context),
+                  'Publicaciones guardadas', Icons.bookmark, context, () {
+                // Acción para Publicaciones guardadas
+              }),
+              _buildConfigButton('Cambiar contraseña', Icons.lock, context, () {
+                Navigator.of(context)
+                    .pushNamed('/change'); // Redirige a /change
+              }),
+              _buildConfigButton('Cerrar Sesión', Icons.exit_to_app, context,
+                  () {
+                Navigator.of(context)
+                    .pushNamed('/inicio'); // Redirige a /inicio
+              }),
             ],
           ),
         ),
@@ -58,13 +74,12 @@ class ConfigPage extends StatelessWidget {
     );
   }
 
-  Widget _buildConfigButton(String text, IconData icon, BuildContext context) {
+  Widget _buildConfigButton(String text, IconData icon, BuildContext context,
+      VoidCallback onPressed) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
       child: ElevatedButton(
-        onPressed: () {
-          // Aquí puedes definir la acción para cada botón
-        },
+        onPressed: onPressed, // Acción personalizada para cada botón
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryColor, // Color de fondo del botón
           padding: EdgeInsets.symmetric(vertical: 15),
