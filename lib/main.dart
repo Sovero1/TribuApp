@@ -8,8 +8,9 @@ import 'package:tribu_app/pages/perfil/perfil_page.dart';
 import 'package:tribu_app/pages/cursos/cursos_page.dart';
 import 'package:tribu_app/pages/editar/editar_page.dart';
 import 'package:tribu_app/pages/postear/postear_page.dart';
-import 'package:tribu_app/pages/config/config_page.dart'; // Importa la página de configuración
+import 'package:tribu_app/pages/config/config_page.dart';
 import 'package:tribu_app/pages/change_password/change_password_page.dart';
+import 'package:tribu_app/configs/app_theme.dart'; // Importa tu archivo de temas
 
 void main() {
   runApp(const MyApp());
@@ -22,10 +23,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tribu',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme(), // Usa el tema claro desde AppTheme
+      darkTheme: AppTheme.darkTheme(), // Usa el tema oscuro desde AppTheme
+      themeMode: ThemeMode.system, // Cambia automáticamente según el sistema
       initialRoute: '/inicio',
       routes: {
         '/home': (context) => HomePage(),
@@ -38,8 +38,7 @@ class MyApp extends StatelessWidget {
         '/editar': (context) => EditarPage(),
         '/postear': (context) => PostearPage(),
         '/config': (context) => ConfigPage(),
-        '/change': (context) =>
-            ChangePasswordPage(), // Ruta para la página de configuración
+        '/change': (context) => ChangePasswordPage(),
       },
     );
   }
