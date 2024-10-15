@@ -48,7 +48,7 @@ class ConfigPage extends StatelessWidget {
               }),
               _buildConfigButton('Visualización', Icons.visibility, context,
                   () {
-                // Acción para Visualización
+                Navigator.of(context).pushNamed('/visualizacion');
               }),
               _buildConfigButton('Archivos', Icons.folder, context, () {
                 // Acción para Archivos

@@ -11,6 +11,7 @@ import 'package:tribu_app/pages/postear/postear_page.dart';
 import 'package:tribu_app/pages/config/config_page.dart';
 import 'package:tribu_app/pages/change_password/change_password_page.dart';
 import 'package:tribu_app/configs/app_theme.dart'; // Importa tu archivo de temas
+import 'package:tribu_app/pages/visualizacion/visualizacion_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         '/postear': (context) => PostearPage(),
         '/config': (context) => ConfigPage(),
         '/change': (context) => ChangePasswordPage(),
+        '/visualizacion': (context) => VisualizacionPage(),
       },
     );
   }
