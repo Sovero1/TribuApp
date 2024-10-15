@@ -21,10 +21,24 @@ class PerfilPage extends StatelessWidget {
             fontSize: 24,
           ),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications_none, color: AppColors.primaryColor),
+            onPressed: () {
+              // Acción de notificaciones
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.person_outline, color: AppColors.primaryColor),
+            onPressed: () {
+              Navigator.of(context).pushNamed('/perfil');
+            },
+          ),
+        ],
       ),
       backgroundColor: AppColors.secondaryColor,
       body: SafeArea(
-        child: SingleChildScrollView( 
+        child: SingleChildScrollView(
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -40,7 +54,8 @@ class PerfilPage extends StatelessWidget {
                       SizedBox(height: 40),
                       CircleAvatar(
                         radius: 90,
-                        backgroundImage: AssetImage('assets/img/splash/splash_icon_dark.png'),
+                        backgroundImage: AssetImage(
+                            'assets/img/splash/splash_icon_dark.png'),
                       ),
                       SizedBox(height: 20),
                       Text(
@@ -87,7 +102,8 @@ class PerfilPage extends StatelessWidget {
                       Divider(color: AppColors.primaryColor, thickness: 2),
                       // Organizar la información en filas
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween, // Para espaciar los elementos
                         children: [
                           Expanded(
                             child: Text(
@@ -114,7 +130,8 @@ class PerfilPage extends StatelessWidget {
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween, // Para espaciar los elementos
                         children: [
                           Expanded(
                             child: Text(
@@ -141,7 +158,8 @@ class PerfilPage extends StatelessWidget {
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween, // Para espaciar los elementos
                         children: [
                           Expanded(
                             child: Text(
@@ -155,7 +173,7 @@ class PerfilPage extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              '${alumno.ciclo}', 
+                              '${alumno.ciclo}',
                               style: TextStyle(
                                 fontFamily: 'Texto',
                                 fontSize: 20,
@@ -167,7 +185,6 @@ class PerfilPage extends StatelessWidget {
                         ],
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
-                      
                     ],
                   );
                 }
