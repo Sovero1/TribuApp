@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tribu_app/configs/colors.dart';
 import 'perfil_controller.dart';
+import '../../components/Custom_Button.dart';
 
 class PerfilPage extends StatelessWidget {
   final PerfilController control = Get.put(PerfilController());
@@ -13,12 +14,17 @@ class PerfilPage extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Text(
-          'Tribu',
-          style: TextStyle(
-            color: AppColors.primaryColor,
-            fontFamily: 'Titulo',
-            fontSize: 24,
+        title: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed('/home');
+          },
+          child: Text(
+            'Tribu',
+            style: TextStyle(
+              color: AppColors.primaryColor,
+              fontFamily: 'Titulo',
+              fontSize: 24,
+            ),
           ),
         ),
         actions: [
@@ -100,10 +106,8 @@ class PerfilPage extends StatelessWidget {
                         ],
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
-                      // Organizar la información en filas
                       Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
                             child: Text(
@@ -117,7 +121,7 @@ class PerfilPage extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              '${alumno.correo}', // Nueva propiedad
+                              '${alumno.correo}',
                               style: TextStyle(
                                 fontFamily: 'Texto',
                                 fontSize: 20,
@@ -130,8 +134,7 @@ class PerfilPage extends StatelessWidget {
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
                             child: Text(
@@ -145,7 +148,7 @@ class PerfilPage extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              '${alumno.celular}', // Nueva propiedad
+                              '${alumno.celular}',
                               style: TextStyle(
                                 fontFamily: 'Texto',
                                 fontSize: 20,
@@ -158,8 +161,7 @@ class PerfilPage extends StatelessWidget {
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .spaceBetween, // Para espaciar los elementos
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
                             child: Text(
@@ -185,6 +187,14 @@ class PerfilPage extends StatelessWidget {
                         ],
                       ),
                       Divider(color: AppColors.primaryColor, thickness: 2),
+                      SizedBox(height: 20),
+                      CustomButton(
+                        title: 'Editar',
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/editar');
+                        },
+                        isOutlined: false,
+                      ),
                     ],
                   );
                 }
