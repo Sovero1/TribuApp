@@ -67,10 +67,10 @@ class PerfilPage extends StatelessWidget {
                           ),
                           Positioned(
                             bottom: 5,
-                            right: 5,
+                            right: 15,
                             child: GestureDetector(
                               onTap: () {
-                                // Acción para cambiar la foto de perfil.
+                                Navigator.of(context).pushNamed('/editar');
                               },
                               child: Container(
                                 padding: const EdgeInsets.all(6),

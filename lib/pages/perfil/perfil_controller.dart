@@ -5,8 +5,7 @@ import 'package:tribu_app/models/alumno.dart';
 
 class PerfilController extends GetxController {
   AlumnoService perfilService = AlumnoService();
-   var alumno = Rx<Alumno?>(null);  // Observable de Alumno
-
+   var alumno = Rx<Alumno?>(null);  
 
   @override
   void onInit() {
@@ -14,24 +13,22 @@ class PerfilController extends GetxController {
     cargarPerfil();
   }
   void cargarPerfil() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  int? idUsuario = prefs.getInt('idUsuario');
-  print("ID Usuario: $idUsuario"); // Agrega esta línea para depuración
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int? idUsuario = prefs.getInt('idUsuario');
+    print("ID Usuario: $idUsuario"); 
 
-  if (idUsuario != null) {
-    Alumno? alumnoEncontrado = await perfilService.obtenerAlumnoPorId(idUsuario);
-    if (alumnoEncontrado != null) {
-      alumno.value = alumnoEncontrado;  
-      print("Alumno encontrado: ${alumno.value?.nombre}"); // Agrega esta línea
+    if (idUsuario != null) {
+      Alumno? alumnoEncontrado = await perfilService.obtenerAlumnoPorId(idUsuario);
+      if (alumnoEncontrado != null) {
+        alumno.value = alumnoEncontrado;  
+        print("Alumno encontrado: ${alumno.value?.nombre}"); 
+      } else {
+        print("Alumno no encontrado"); 
+        alumno.value = null;
+      }
     } else {
-      print("Alumno no encontrado"); // Agrega esta línea
+      print("No hay ID de usuario guardado"); 
       alumno.value = null;
     }
-  } else {
-    print("No hay ID de usuario guardado"); // Agrega esta línea
-    alumno.value = null;
   }
-}
-
-  
 }
