@@ -47,147 +47,71 @@ class PerfilPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(16.0),
               child: Obx(() {
                 if (control.alumno.value == null) {
                   return CircularProgressIndicator();
                 } else {
-                  // Mostrar la información del alumno que inició sesión
                   final alumno = control.alumno.value!;
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(height: 40),
-                      CircleAvatar(
-                        radius: 90,
-                        backgroundImage: AssetImage(
-                            'assets/img/splash/splash_icon_dark.png'),
+                      const SizedBox(height: 50),
+                      Stack(
+                        alignment: Alignment.bottomRight,
+                        children: [
+                          CircleAvatar(
+                            radius: 90,
+                            backgroundImage: AssetImage(
+                                'assets/img/splash/splash_icon_dark.png'),
+                          ),
+                          Positioned(
+                            bottom: 5,
+                            right: 5,
+                            child: GestureDetector(
+                              onTap: () {
+                                // Acción para cambiar la foto de perfil.
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text(
                         alumno.nombre,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'Titulo',
                           fontSize: 26,
+                          fontWeight: FontWeight.bold,
                           color: AppColors.primaryColor,
                         ),
                       ),
-                      SizedBox(height: 40),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              '  ${alumno.carrera}',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              '  ${alumno.codigo}',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Email:',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              '${alumno.correo}',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                              textAlign: TextAlign.right,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Teléfono:',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              '${alumno.celular}',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                              textAlign: TextAlign.right,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Ciclo :',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              '${alumno.ciclo}',
-                              style: TextStyle(
-                                fontFamily: 'Texto',
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                              ),
-                              textAlign: TextAlign.right,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(color: AppColors.primaryColor, thickness: 2),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 40),
+                      _buildDivider(),
+                      _buildInfoRow('Carrera', alumno.carrera),
+                      _buildDivider(),
+                      _buildInfoRow('Código', alumno.codigo),
+                      _buildDivider(),
+                      _buildInfoRow('Correo', alumno.correo),
+                      _buildDivider(),
+                      _buildInfoRow('Universidad', 'Universidad de Lima'),
+                      _buildDivider(),
+                      _buildInfoRow('Teléfono', alumno.celular),
+                      _buildDivider(),
+                      const SizedBox(height: 80),
+
                       CustomButton(
                         title: 'Editar',
                         onPressed: () {
@@ -203,6 +127,43 @@ class PerfilPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildInfoRow(String title, String content) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontFamily: 'Texto',
+              fontSize: 18,
+              color: AppColors.primaryColor,
+            ),
+          ),
+          Text(
+            content,
+            style: const TextStyle(
+              fontFamily: 'Texto',
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: AppColors.primaryColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Widget para construir el divisor
+  Widget _buildDivider() {
+    return Divider(
+      color: AppColors.primaryColor,
+      thickness: 1,
+      height: 10,
     );
   }
 }
